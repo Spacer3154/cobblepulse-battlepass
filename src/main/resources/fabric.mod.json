@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "cobblepulse_battlepass",
+  "version": "${version}",
+  "name": "CobblePulse Passe de Combat",
+  "description": "Passe de Combat saisonnier pour CobblePulse / Cobblemon : paliers gratuits et premium, quetes quotidiennes, hebdomadaires et de saison, chasses (d'apres CobbleHunts), connexion quotidienne, editeur graphique.",
+  "authors": ["CobblePulse"],
+  "contributors": ["Fredrick Von Burger (Cobblemon Trainer Pass, MIT)", "Hysocs (CobbleHunts, LGPL-3.0)"],
+  "contact": {},
+  "license": "LGPL-3.0-only",
+  "icon": "assets/cobblepulse_battlepass/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["fr.cobblepulse.battlepass.BattlePass"],
+    "client": ["fr.cobblepulse.battlepass.client.BattlePassClient"]
+  },
+  "mixins": ["cobblepulse_battlepass.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*",
+    "fabric-language-kotlin": "*",
+    "cobblemon": ">=1.8.0"
+  },
+  "recommends": {
+    "luckperms": "*",
+    "placeholder-api": "*",
+    "cobblepulse_battletower": "*"
+  },
+  "suggests": {
+    "jobsplus": "*"
+  }
+}
