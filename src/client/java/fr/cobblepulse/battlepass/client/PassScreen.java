@@ -547,7 +547,7 @@ public final class PassScreen extends Screen {
         Ui.text(g, Ui.str(c, "label", diff), x + 5, y + 4, Ui.TEXT);
         String pts = "+" + Ui.lng(c, "points", 0) + " pts";
         Ui.text(g, pts, x + w - 5 - Ui.font().width(pts), y + 4, Ui.GOLD);
-        JsonObject h = c.has("hunt") && c.get("hunt").isJsonObject() ? c.getAsJsonObject("hunt") : null;
+        JsonObject hunt = c.has("hunt") && c.get("hunt").isJsonObject() ? c.getAsJsonObject("hunt") : null;
         int by = y + h - 20;
         switch (state) {
             case "DISABLED" -> Ui.centered(g, "Désactivée", x + w / 2, y + h / 2, Ui.MUTED);
@@ -557,20 +557,20 @@ public final class PassScreen extends Screen {
                 Ui.centered(g, Ui.duration(Ui.lng(c, "rechargeFin", 0) - now()), x + w / 2, y + h / 2 + 2, Ui.TEXT);
             }
             default -> {
-                if (h != null) {
-                    float scale = Math.min(2.5f, Math.max(1.5f, (h(h, w)) / 16f));
+                if (hunt != null) {
+                    float scale = Math.min(2.5f, Math.max(1.5f, (huntIconSize(w)) / 16f));
                     int size = (int) (16 * scale);
-                    Ui.item(g, Ui.item(Ui.str(h, "icon", "")), x + w / 2 - size / 2, y + 18, scale, false);
+                    Ui.item(g, Ui.item(Ui.str(hunt, "icon", "")), x + w / 2 - size / 2, y + 18, scale, false);
                     int ty = y + 20 + size;
-                    Ui.centered(g, Ui.cut(Ui.comp(Ui.str(h, "species", "")).getString(), w - 6), x + w / 2, ty, Ui.TEXT);
-                    String req = requirements(h, hd);
+                    Ui.centered(g, Ui.cut(Ui.comp(Ui.str(hunt, "species", "")).getString(), w - 6), x + w / 2, ty, Ui.TEXT);
+                    String req = requirements(hunt, hd);
                     List<FormattedCharSequence> lines = Ui.font().split(Component.literal(req), w - 8);
                     for (int i = 0; i < Math.min(2, lines.size()); i++) {
                         g.drawString(Ui.font(), lines.get(i), x + w / 2 - Ui.font().width(lines.get(i)) / 2, ty + 11 + i * 9, Ui.MUTED, false);
                     }
-                    if (active) Ui.centered(g, "Temps : " + Ui.duration(Ui.lng(h, "fin", 0) - now()), x + w / 2, by - 11, Ui.OK);
+                    if (active) Ui.centered(g, "Temps : " + Ui.duration(Ui.lng(hunt, "fin", 0) - now()), x + w / 2, by - 11, Ui.OK);
                     else Ui.centered(g, "Durée : " + Ui.duration(Ui.lng(c, "duree", 0) * 1000L), x + w / 2, by - 11, Ui.MUTED);
-                    lootTip(h, x, y + 16, w, size + 14, mx, my);
+                    lootTip(hunt, x, y + 16, w, size + 14, mx, my);
                 } else {
                     Ui.centered(g, "Aucun Pokémon", x + w / 2, y + h / 2, Ui.MUTED);
                 }
@@ -582,7 +582,7 @@ public final class PassScreen extends Screen {
                         a.addProperty("diff", diff);
                         Ui.send("hunt_abandon", a);
                     });
-                } else if ("READY".equals(state) && h != null) {
+                } else if ("READY".equals(state) && hunt != null) {
                     hot(g, x + 4, by, w - 8, 16, "Lancer la chasse", Ui.ACCENT, true, mx, my, () -> {
                         JsonObject a = new JsonObject();
                         a.addProperty("diff", diff);
@@ -593,7 +593,7 @@ public final class PassScreen extends Screen {
         }
     }
 
-    private static int h(JsonObject h, int w) {
+    private static int huntIconSize(int w) {
         return Math.min(40, w / 3);
     }
 
