@@ -1,0 +1,98 @@
+{
+  "displayName": "<#00FF00>%player:name%</#>",
+  "chatFormat": "%cobblepulse:lp_prefix%%cobblepulse:chat_prefix%%cobblepulse_battlepass:etoile%${display_name} <#AAAAAA>➤</#> ${message}",
+  "joinMessage": "<#FFD700>%player:name% a rejoint le serveur !</#>",
+  "leaveMessage": "<#FFD700>%player:name% a quitté le serveur !</#>",
+  "baseDeath": "<#424242>☠</#> <#a9a9a9>${default_message}</#>",
+  "commandFormats": {
+    "msgSent": "<#b77df9>Vous chuchotez à <#ffe856>%receiver%</#> : <#e0c8fb>%message%</#>",
+    "msgReceived": "<#b77df9>%sender%</#> <#b77df9>vous chuchote : <#e0c8fb>%message%</#>",
+    "say": "<#ffe856>%player%</#> <#2c2c2c>↔ <#eafff7>%message%</#>",
+    "me": "<#d7f33b>* %player% %message%</#>",
+    "spy": "<#141414>[</#><#26D0FF>Spy</#><#141414>]</#> <#ffba26>%sender%</#> <#AAAAAA>→</#> <#55ffff>%targets%</#>: <#FFFFFF>%message%</#>",
+    "broadcast": "<#ffcc00>[Annonce]</#> <#ffffff>%message%</#>"
+  },
+  "advancementFormats": {
+    "enabled": true,
+    "task": "&7%player% a obtenu le progrès &a[%advancement%]&7 !",
+    "goal": "&7%player% a atteint l'objectif &e[%advancement%]&7 !",
+    "challenge": "&7%player% a relevé le défi &d[%advancement%]&7 !"
+  },
+  "joinLeaveMessages": {
+    "enabled": true,
+    "useVanillaIfBlank": true
+  },
+  "deathMessage": {
+    "enabled": true,
+    "useVanillaIfBlank": true
+  },
+  "mentionFormats": {
+    "mentionedTitle": "<#ffe033>%sender% vous a mentionné dans le message :</#>",
+    "mentionedMessage": "<#aaaaaa>→ %message%</#>"
+  },
+  "nameTag": {
+    "prefix": "%cobblepulse:lp_prefix%%cobblepulse:chat_prefix%%cobblepulse_battlepass:etoile%",
+    "nameColor": "&f",
+    "suffix": ""
+  },
+  "chatSystems": {
+    "announcements": true,
+    "logMessages": true,
+    "commandLogs": true,
+    "rankFormat": true,
+    "spam": true,
+    "tab": true,
+    "nameTags": true
+  },
+  "rankFormats": [
+    {
+      "rankDisplayName": "%player:name%",
+      "rankChatFormat": "<#ff5555>%cobblepulse:lp_prefix%</#>%cobblepulse:chat_prefix%%cobblepulse_battlepass:etoile%${display_name} <#aaaaaa>➤</#> ${message}",
+      "rankPermission": "shadowchat.rank.admin"
+    },
+    {
+      "rankDisplayName": "%player:name%",
+      "rankChatFormat": "<#55ffff>%cobblepulse:lp_prefix%</#>%cobblepulse:chat_prefix%%cobblepulse_battlepass:etoile%${display_name} <#aaaaaa>➤</#> ${message}",
+      "rankPermission": "shadowchat.rank.default"
+    }
+  ],
+  "spam": {
+    "windowMs": 3000,
+    "maxMessages": 5,
+    "warnMessage": "<#ffe033>⚠</#> <#ff7253>Doucement, %player% ! Vous envoyez des messages trop vite.</#>"
+  },
+  "tab": {
+    "header": [
+      "<#55ffff>CobblePulse</#>",
+      "<#aaaaaa>Bon jeu parmi nous !</#>"
+    ],
+    "footer": [
+      "<#aaaaaa>En ligne : %server:online% / %server:max_players%</#>"
+    ],
+    "playerFormat": "%cobblepulse:lp_prefix%%cobblepulse:chat_prefix%%cobblepulse_battlepass:etoile%${displayname}"
+  },
+  "tabSettings": {
+    "autoRefreshTicks": 100
+  },
+  "joinMotd": {
+    "enabled": true,
+    "sendBeforeJoinMessage": true,
+    "lines": [
+      "<#3D3D3D>--------------------------------</#>",
+      "<#55ffff>Bienvenue, %player:name% !</#>",
+      "<#aaaaaa>Consultez </#><#ffe856>/rules</#><#aaaaaa> et </#><#ffe856>/discord</#><#aaaaaa>.</#>",
+      "<#3D3D3D>--------------------------------</#>"
+    ],
+    "sendAfterTicks": 10
+  },
+  "commandLogs": {
+    "logConsoleCommands": false,
+    "logArguments": true,
+    "ignoredCommands": [
+      "warp",
+      "tpa",
+      "home",
+      "balance"
+    ]
+  }
+}
