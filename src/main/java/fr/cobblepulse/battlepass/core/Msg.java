@@ -37,15 +37,20 @@ public final class Msg {
         return TextUtil.legacy(format(key, kv));
     }
 
+    /** Joueur joignable (les joueurs factices sans connexion sont ignores). */
+    public static boolean reachable(ServerPlayer p) {
+        return p != null && p.connection != null;
+    }
+
     public static void send(ServerPlayer p, String key, Object... kv) {
-        if (p != null) p.sendSystemMessage(get(key, kv));
+        if (reachable(p)) p.sendSystemMessage(get(key, kv));
     }
 
     public static void send(UUID uuid, String key, Object... kv) {
         MinecraftServer s = BattlePass.server();
         if (s == null || uuid == null) return;
         ServerPlayer p = s.getPlayerList().getPlayer(uuid);
-        if (p != null) p.sendSystemMessage(get(key, kv));
+        if (reachable(p)) p.sendSystemMessage(get(key, kv));
     }
 
     public static void send(CommandSourceStack src, String key, Object... kv) {
@@ -62,6 +67,6 @@ public final class Msg {
     }
 
     public static void actionBar(ServerPlayer p, String key, Object... kv) {
-        if (p != null) p.displayClientMessage(get(key, kv), true);
+        if (reachable(p)) p.displayClientMessage(get(key, kv), true);
     }
 }

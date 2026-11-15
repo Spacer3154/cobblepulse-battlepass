@@ -37,8 +37,34 @@ public abstract class EditScreen extends Screen {
         return 0;
     }
 
+    private int savedGuiScale = -1;
+
+    /** Reduit l'echelle d'interface si l'ecran est trop petit (restauree a la fermeture). */
+    private void fitGuiScale() {
+        com.mojang.blaze3d.platform.Window win = minecraft.getWindow();
+        int cur = (int) win.getGuiScale();
+        int s = cur;
+        while (s > 1 && (win.getWidth() / s < 480 || win.getHeight() / s < 280)) s--;
+        if (s != cur) {
+            if (savedGuiScale < 0) savedGuiScale = cur;
+            win.setGuiScale(s);
+            this.width = win.getGuiScaledWidth();
+            this.height = win.getGuiScaledHeight();
+        }
+    }
+
+    @Override
+    public void removed() {
+        super.removed();
+        if (savedGuiScale > 0) {
+            minecraft.getWindow().setGuiScale(savedGuiScale);
+            savedGuiScale = -1;
+        }
+    }
+
     @Override
     protected void init() {
+        fitGuiScale();
         pw = Math.min(width - 16, 620);
         ph = height - 16;
         px = (width - pw) / 2;

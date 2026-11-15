@@ -507,6 +507,15 @@ public final class AdminScreen extends Screen {
         }
     }
 
+    private void tabHot(GuiGraphics g, int x, int y, int w, int h, String label, boolean selected, int color, int mx, int my, Runnable action) {
+        if (selected) {
+            Ui.panel(g, x, y, w, h, 0xFF2B4766, color);
+            Ui.centered(g, Ui.cut(label, w - 4), x + w / 2, y + (h - 8) / 2, color);
+        } else {
+            hot(g, x, y, w, h, label, Ui.TEXT, true, mx, my, action);
+        }
+    }
+
     private void hot(GuiGraphics g, int x, int y, int w, int h, String label, int color, boolean enabled, int mx, int my, Runnable action) {
         boolean hov = enabled && Ui.in(mx, my, x, y, w, h);
         Ui.panel(g, x, y, w, h, enabled ? (hov ? 0xFF2C3E58 : 0xFF223044) : 0xFF1A1F27, enabled ? color : Ui.BORDER);
@@ -542,9 +551,11 @@ public final class AdminScreen extends Screen {
         int total = (int) Ui.lng(saison, "paliers", 50);
         int listW = 120;
         int lx = px + 8;
-        int top = cy + 4;
+        int top = cy + 16;
         int bottom = cy + ch - 4;
         int rowH = 16;
+        Ui.text(g, "Paliers", lx + 2, cy + 4, Ui.MUTED);
+        Ui.text(g, "grat./prem.", lx + 120 - 2 - Ui.font().width("grat./prem."), cy + 4, Ui.MUTED);
         double max = Math.max(0, total * rowH - (bottom - top));
         scrolls[1] = Math.max(0, Math.min(max, scrolls[1]));
         selTier = Math.max(1, Math.min(total, selTier));
@@ -565,10 +576,10 @@ public final class AdminScreen extends Screen {
             if (my >= top && my < bottom) hots.add(new Hot(lx, y, listW, rowH - 1, () -> selTier = tt));
         }
         g.disableScissor();
-        Ui.text(g, "gratuit / premium", lx, bottom + 2 > py + ph - 30 ? bottom - 10 : bottom + 2, Ui.MUTED);
         int rx = lx + listW + 8;
         int rw = px + pw - 8 - rx;
         int colW = (rw - 8) / 2;
+        top = cy + 4;
         Ui.text(g, "Palier " + selTier, rx, top, Ui.GOLD);
         hot(g, rx + 80, top - 2, 120, 12, "Copier vers le suivant", Ui.ACCENT, selTier < total, mx, my, () -> {
             JsonObject src = tier(selTier, true);
@@ -667,7 +678,7 @@ public final class AdminScreen extends Screen {
         for (int i = 0; i < CATS.size(); i++) {
             int idx = i;
             int n = Ui.arr(quetes, CATS.get(i)).size();
-            hot(g, bx, cy + 2, 130, 16, CAT_NAMES.get(i) + " (" + n + ")", questCat == i ? Ui.GOLD : Ui.TEXT, questCat != i, mx, my, () -> {
+            tabHot(g, bx, cy + 2, 130, 16, CAT_NAMES.get(i) + " (" + n + ")", questCat == i, Ui.GOLD, mx, my, () -> {
                 questCat = idx;
                 scrolls[4] = 0;
             });
@@ -759,7 +770,7 @@ public final class AdminScreen extends Screen {
         int bx = px + 8;
         for (int i = 0; i < subs.length; i++) {
             int idx = i;
-            hot(g, bx, cy + 2, 90, 16, subs[i], huntSub == i ? Ui.GOLD : Ui.TEXT, huntSub != i, mx, my, () -> {
+            tabHot(g, bx, cy + 2, 90, 16, subs[i], huntSub == i, Ui.GOLD, mx, my, () -> {
                 if (form != null) scrolls[3] = form.scroll();
                 huntSub = idx;
                 rebuild();
@@ -770,7 +781,7 @@ public final class AdminScreen extends Screen {
         bx += 16;
         for (int i = 0; i < DIFFS.size(); i++) {
             int idx = i;
-            hot(g, bx, cy + 2, 70, 16, DIFF_NAMES.get(i), huntDiff == i ? Ui.PURPLE : Ui.TEXT, huntDiff != i, mx, my, () -> huntDiff = idx);
+            tabHot(g, bx, cy + 2, 70, 16, DIFF_NAMES.get(i), huntDiff == i, Ui.PURPLE, mx, my, () -> huntDiff = idx);
             bx += 74;
         }
         String diff = DIFFS.get(huntDiff);

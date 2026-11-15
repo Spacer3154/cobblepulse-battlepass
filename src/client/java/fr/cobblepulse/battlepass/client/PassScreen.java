@@ -257,6 +257,16 @@ public final class PassScreen extends Screen {
         return d == Math.rint(d) ? String.valueOf((long) d) : String.format(java.util.Locale.ROOT, "%.1f", d);
     }
 
+    /** Onglet : l'onglet courant est mis en avant (non cliquable). */
+    private void tabHot(GuiGraphics g, int x, int y, int w, int h, String label, boolean selected, int mx, int my, Runnable action) {
+        if (selected) {
+            Ui.panel(g, x, y, w, h, 0xFF2B4766, Ui.GOLD);
+            Ui.centered(g, Ui.cut(label, w - 4), x + w / 2, y + (h - 8) / 2, Ui.GOLD);
+        } else {
+            hot(g, x, y, w, h, label, Ui.TEXT, true, mx, my, action);
+        }
+    }
+
     private void hot(GuiGraphics g, int x, int y, int w, int h, String label, int color, boolean enabled, int mx, int my, Runnable action) {
         boolean hov = enabled && Ui.in(mx, my, x, y, w, h);
         Ui.panel(g, x, y, w, h, enabled ? (hov ? 0xFF2C3E58 : 0xFF223044) : 0xFF1A1F27, enabled ? color : Ui.BORDER);
@@ -286,8 +296,8 @@ public final class PassScreen extends Screen {
         int n = Math.max(3, area / (cardW + 4));
         cardW = area / n - 4;
         firstTier = Math.max(1, Math.min(firstTier, Math.max(1, total - n + 1)));
-        hot(g, ax, cy + 4, arrowW, ch - 8, "<", Ui.TEXT, firstTier > 1, mx, my, () -> firstTier = Math.max(1, firstTier - n));
-        hot(g, px + pw - 6 - arrowW, cy + 4, arrowW, ch - 8, ">", Ui.TEXT, firstTier + n <= total, mx, my, () -> firstTier += n);
+        hot(g, ax, cy + 4, arrowW, ch - 18, "<", Ui.TEXT, firstTier > 1, mx, my, () -> firstTier = Math.max(1, firstTier - n));
+        hot(g, px + pw - 6 - arrowW, cy + 4, arrowW, ch - 18, ">", Ui.TEXT, firstTier + n <= total, mx, my, () -> firstTier += n);
         int cx = ax + arrowW + 4;
         int tierNow = (int) Ui.lng(player(), "palier", 0);
         boolean prem = Ui.bool(player(), "premium", false);
@@ -301,10 +311,10 @@ public final class PassScreen extends Screen {
             int x = cx + i * (cardW + 4);
             boolean unlocked = tn <= tierNow;
             boolean current = tn == tierNow + 1;
-            Ui.panel(g, x, cy + 4, cardW, ch - 8, unlocked ? Ui.CARD_ON : Ui.CARD, current ? Ui.ACCENT : unlocked ? 0xFF3E6A96 : Ui.BORDER);
+            Ui.panel(g, x, cy + 4, cardW, ch - 18, unlocked ? Ui.CARD_ON : Ui.CARD, current ? Ui.ACCENT : unlocked ? 0xFF3E6A96 : Ui.BORDER);
             g.fill(x + 1, cy + 5, x + cardW - 1, cy + 18, unlocked ? 0xFF2B4766 : 0xFF202733);
             Ui.centered(g, "Palier " + tn, x + cardW / 2, cy + 8, unlocked ? Ui.TEXT : Ui.MUTED);
-            int half = (ch - 8 - 16) / 2;
+            int half = (ch - 18 - 16) / 2;
             int fy = cy + 20;
             track(g, x, fy, cardW, half - 2, Ui.arr(t, "g"), false, tn, unlocked, claimed.contains("g:" + tn), true, canClaim, mx, my);
             if (premActive) {
@@ -312,7 +322,7 @@ public final class PassScreen extends Screen {
             }
         }
         String hint = "Molette : faire défiler  •  Cliquez sur une récompense débloquée pour la réclamer";
-        Ui.centered(g, Ui.cut(hint, pw - 20), px + pw / 2, py + ph - 14, Ui.MUTED);
+        Ui.centered(g, Ui.cut(hint, pw - 20), px + pw / 2, cy + ch - 10, Ui.MUTED);
     }
 
     private void track(GuiGraphics g, int x, int y, int w, int h, JsonArray rewards, boolean premium, int tier, boolean unlocked,
@@ -331,7 +341,8 @@ public final class PassScreen extends Screen {
         } else {
             int per = Math.max(1, Math.min(n, (w - 10) / 18));
             int rows = (n + per - 1) / per;
-            float scale = rows > 1 || n > 2 ? 1.0f : 1.25f;
+            float scale = rows > 1 ? 1.0f : n == 1 ? Math.min(2.5f, Math.max(1f, (w - 16) / 24f)) : n == 2 ? 1.5f : 1.0f;
+            if (h < 50) scale = Math.min(scale, 1.25f);
             int size = (int) (16 * scale);
             int gy = y + 14 + Math.max(0, (h - 26 - rows * (size + 2)) / 2);
             for (int i = 0; i < n; i++) {
@@ -352,9 +363,9 @@ public final class PassScreen extends Screen {
                 }
             }
         }
-        String state = claimed ? "✔ Réclamé" : !unlocked ? "Verrouillé" : !hasAccess ? "Premium requis" : n == 0 ? "" : "Réclamer";
+        String state = claimed ? "✔ Réclamé" : !unlocked ? "Verrouillé" : !hasAccess ? "★ Requis" : n == 0 ? "" : "Réclamer";
         int sc = claimed ? Ui.OK : claimable ? (premium ? Ui.GOLD : Ui.ACCENT) : Ui.MUTED;
-        Ui.centered(g, state, x + w / 2, y + h - 11, sc);
+        Ui.centered(g, Ui.cut(state, w - 8), x + w / 2, y + h - 11, sc);
         if (claimed || !unlocked || !hasAccess) g.fill(x + 4, y + 13, x + w - 4, y + h - 13, 0x60000000);
         if (claimable) {
             boolean pr = premium;
@@ -387,7 +398,7 @@ public final class PassScreen extends Screen {
             }
             String txt = label + " " + done + "/" + count;
             int idx = i;
-            hot(g, bx, cy + 4, 118, 16, txt, questCat == i ? Ui.GOLD : Ui.TEXT, questCat != i, mx, my, () -> {
+            tabHot(g, bx, cy + 4, 118, 16, txt, questCat == i, mx, my, () -> {
                 questCat = idx;
                 lastQuestCat = idx;
                 questScroll = 0;

@@ -202,6 +202,8 @@ public final class SelfTest {
         FakePlayer a = fake(level, "BPLogin");
         PlayerData d = PlayerStore.get(a);
         Season.reset(d, false);
+        d.dernierJour = "";
+        d.serie = 0;
         long before = d.points;
         Season.dailyLogin(a);
         long after1 = d.points;
@@ -274,9 +276,20 @@ public final class SelfTest {
         // Grosse quantite (plusieurs piles)
         RewardService.giveAll(p, d, List.of(Defaults.item("minecraft:cobblestone", 200)), new ArrayList<>());
         check(src, "reward.big_stack", count(p, Items.COBBLESTONE) == 200, "n=" + count(p, Items.COBBLESTONE));
-        // Commande console
-        RewardService.giveAll(p, d, List.of(Defaults.cmd("test", "minecraft:paper", "tag %player% add bp_selftest")), new ArrayList<>());
-        check(src, "reward.command", p.getTags().contains("bp_selftest"), "tags=" + p.getTags());
+        // Commande console (tableau des scores : fonctionne aussi pour un joueur factice)
+        MinecraftServer server = p.getServer();
+        server.getCommands().performPrefixedCommand(server.createCommandSourceStack(), "scoreboard objectives add bp_selftest dummy");
+        RewardService.giveAll(p, d, List.of(Defaults.cmd("test", "minecraft:paper", "scoreboard players add %player% bp_selftest 5")), new ArrayList<>());
+        int score = 0;
+        try {
+            var sb = server.getScoreboard();
+            var obj = sb.getObjective("bp_selftest");
+            var info = obj == null ? null : sb.getPlayerScoreInfo(net.minecraft.world.scores.ScoreHolder.forNameOnly(p.getGameProfile().getName()), obj);
+            score = info == null ? 0 : info.value();
+        } catch (Throwable t) {
+            BattlePass.LOG.warn("[BattlePass][selftest] score : {}", t.toString());
+        }
+        check(src, "reward.command", score == 5, "score=" + score);
         // Coins Jobs+ : absent en CI -> refus propre
         List<String> e2 = new ArrayList<>();
         boolean coins = RewardService.giveAll(p, d, List.of(Defaults.amount("coins_jobs", 10)), e2);

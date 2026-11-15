@@ -25,7 +25,7 @@ public final class Fx {
     }
 
     public static void sound(ServerPlayer p, SoundEvent sound, float volume, float pitch) {
-        if (p == null || sound == null) return;
+        if (p == null || sound == null || p.connection == null) return;
         p.playNotifySound(sound, SoundSource.MASTER, volume, pitch);
     }
 

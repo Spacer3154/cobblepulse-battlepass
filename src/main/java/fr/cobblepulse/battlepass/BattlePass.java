@@ -53,11 +53,12 @@ public final class BattlePass implements ModInitializer {
             PlayerStore.load();
             Season.load();
             Hunts.load();
-            Season.ensureGroups();
             LOG.info("[BattlePass] {} ({}) - {} paliers, {} jours. LuckPerms : {}, Battletower : {}, Jobs+ : {}",
                     Cfg.pass.nom, Season.status(), Cfg.pass.paliers, Cfg.pass.jours, LuckPermsBridge.present() ? "oui" : "non",
                     BattletowerBridge.present() ? "oui" : "non", JobsBridge.present() ? "oui" : "non");
         });
+        // LuckPerms n'est disponible qu'une fois le serveur demarre
+        ServerLifecycleEvents.SERVER_STARTED.register(s -> Season.ensureGroups());
         ServerLifecycleEvents.SERVER_STOPPING.register(s -> {
             DataService.shutdown();
             PlayerStore.clear();
