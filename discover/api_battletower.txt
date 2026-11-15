@@ -1,0 +1,278 @@
+Compiled from "TowerBattle.java"
+public final class fr.cobblepulse.battletower.battle.TowerBattle {
+  private static final java.util.Map<java.util.UUID, fr.cobblepulse.battletower.battle.TowerBattle$Live> LIVE;
+  public static java.util.function.BiConsumer<com.cobblemon.mod.common.api.battles.model.PokemonBattle, fr.cobblepulse.battletower.battle.TowerBattle$Live> observer;
+  private static final java.util.Set<java.util.UUID> PROTECTED_OWNERS;
+  private fr.cobblepulse.battletower.battle.TowerBattle();
+  public static void register();
+  private static void safe(java.lang.Runnable);
+  public static fr.cobblepulse.battletower.battle.TowerBattle$Live live(java.util.UUID);
+  public static fr.cobblepulse.battletower.battle.TowerBattle$Live liveFor(java.util.UUID);
+  public static boolean npcBusy(java.util.UUID);
+  public static com.cobblemon.mod.common.battles.BattleFormat format(fr.cobblepulse.battletower.data.TrainerSpec);
+  public static java.lang.String start(net.minecraft.class_3222, com.cobblemon.mod.common.entity.npc.NPCEntity, fr.cobblepulse.battletower.data.TrainerSpec, java.util.function.Consumer<fr.cobblepulse.battletower.battle.TowerBattle$Outcome>);
+  private static java.lang.String describe(com.cobblemon.mod.common.battles.BattleStartError, net.minecraft.class_3222);
+  private static void onVictory(com.cobblemon.mod.common.api.battles.model.PokemonBattle, java.util.List<com.cobblemon.mod.common.api.battles.model.actor.BattleActor>);
+  public static void finish(fr.cobblepulse.battletower.battle.TowerBattle$Live, boolean, boolean, int, java.lang.String);
+  private static void tick();
+  public static void forfeit(java.util.UUID, java.lang.String);
+  public static void clear();
+  private static void lambda$onVictory$15(fr.cobblepulse.battletower.battle.TowerBattle$Live, boolean, int);
+  private static void lambda$start$14(java.util.List, net.minecraft.class_3222, java.util.Set);
+  private static void lambda$start$13(java.util.List, net.minecraft.class_3222, com.cobblemon.mod.common.battles.BattleStartError);
+  private static boolean lambda$start$12(com.cobblemon.mod.common.battles.pokemon.BattlePokemon);
+  private static kotlin.Unit lambda$register$11(com.cobblemon.mod.common.api.events.pokemon.EvGainedEvent$Pre);
+  private static void lambda$register$10(com.cobblemon.mod.common.api.events.pokemon.EvGainedEvent$Pre);
+  private static kotlin.Unit lambda$register$9(com.cobblemon.mod.common.api.events.pokemon.ExperienceGainedEvent$Pre);
+  private static void lambda$register$8(com.cobblemon.mod.common.api.events.pokemon.ExperienceGainedEvent$Pre);
+  private static kotlin.Unit lambda$register$7(com.cobblemon.mod.common.api.events.battles.instruction.TerastallizationEvent);
+  private static void lambda$register$6(com.cobblemon.mod.common.api.events.battles.instruction.TerastallizationEvent);
+  private static kotlin.Unit lambda$register$5(com.cobblemon.mod.common.api.events.battles.BattleFaintedEvent);
+  private static void lambda$register$4(com.cobblemon.mod.common.api.events.battles.BattleFaintedEvent);
+  private static kotlin.Unit lambda$register$3(com.cobblemon.mod.common.api.events.battles.BattleFledEvent);
+  private static void lambda$register$2(com.cobblemon.mod.common.api.events.battles.BattleFledEvent);
+  private static kotlin.Unit lambda$register$1(com.cobblemon.mod.common.api.events.battles.BattleVictoryEvent);
+  private static void lambda$register$0(com.cobblemon.mod.common.api.events.battles.BattleVictoryEvent);
+  static {};
+}
+Compiled from "TowerBattle.java"
+public final class fr.cobblepulse.battletower.battle.TowerBattle$Live {
+  public final java.util.UUID battleId;
+  public final java.util.UUID player;
+  public final java.util.UUID npc;
+  public final fr.cobblepulse.battletower.data.TrainerSpec spec;
+  public final fr.cobblepulse.battletower.ai.TowerAI ai;
+  public final java.util.function.Consumer<fr.cobblepulse.battletower.battle.TowerBattle$Outcome> onEnd;
+  public boolean playerFainted;
+  public boolean finished;
+  long goneSince;
+  fr.cobblepulse.battletower.battle.TowerBattle$Live(java.util.UUID, java.util.UUID, java.util.UUID, fr.cobblepulse.battletower.data.TrainerSpec, fr.cobblepulse.battletower.ai.TowerAI, java.util.function.Consumer<fr.cobblepulse.battletower.battle.TowerBattle$Outcome>);
+}
+Compiled from "TowerBattle.java"
+public final class fr.cobblepulse.battletower.battle.TowerBattle$Outcome extends java.lang.Record {
+  private final java.util.UUID battleId;
+  private final java.util.UUID player;
+  private final boolean won;
+  private final boolean aborted;
+  private final int turns;
+  private final boolean playerFainted;
+  private final java.lang.String reason;
+  public fr.cobblepulse.battletower.battle.TowerBattle$Outcome(java.util.UUID, java.util.UUID, boolean, boolean, int, boolean, java.lang.String);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.UUID battleId();
+  public java.util.UUID player();
+  public boolean won();
+  public boolean aborted();
+  public int turns();
+  public boolean playerFainted();
+  public java.lang.String reason();
+}
+Compiled from "PlayerData.java"
+public final class fr.cobblepulse.battletower.data.PlayerData {
+  public java.lang.String uuid;
+  public java.lang.String name;
+  public long bp;
+  public long bpEarned;
+  public int maxFloor;
+  public int completions;
+  public int totalWins;
+  public int totalLosses;
+  public long bestTimeMs;
+  public long cooldownUntil;
+  public long lastRunAt;
+  public java.lang.String dailyBossDay;
+  public int dailyBossWins;
+  public java.util.Set<java.lang.String> dailyBossBeaten;
+  public java.util.Map<java.lang.String, java.lang.Long> achievements;
+  public int bestNoKoStreak;
+  public int monotypeFloors;
+  public java.util.Map<java.lang.String, java.lang.Integer> purchases;
+  public boolean pendingExit;
+  public java.lang.String pendingMessage;
+  public fr.cobblepulse.battletower.data.PlayerData();
+  public fr.cobblepulse.battletower.data.PlayerData(java.lang.String, java.lang.String);
+  public void normalize();
+}
+Compiled from "RunState.java"
+public final class fr.cobblepulse.battletower.data.RunState {
+  public java.lang.String uuid;
+  public java.lang.String name;
+  public int floor;
+  public fr.cobblepulse.battletower.data.RunState$Phase phase;
+  public long startedAt;
+  public long activeMs;
+  public long activeSince;
+  public long floorSince;
+  public int noKoStreak;
+  public int wins;
+  public boolean daily;
+  public java.lang.String dailyBossId;
+  public long graceUntil;
+  public boolean serverInterrupted;
+  public transient java.util.UUID battleId;
+  public transient long battleStartedAt;
+  public transient boolean anyFainted;
+  public transient long protectUntil;
+  public transient long countdownToken;
+  public fr.cobblepulse.battletower.data.RunState();
+  public void resumeClock(long);
+  public void pauseClock(long);
+  public long elapsed(long);
+}
+Compiled from "RunState.java"
+public final class fr.cobblepulse.battletower.data.RunState$Phase extends java.lang.Enum<fr.cobblepulse.battletower.data.RunState$Phase> {
+  public static final fr.cobblepulse.battletower.data.RunState$Phase FLOOR;
+  public static final fr.cobblepulse.battletower.data.RunState$Phase QUEUED;
+  public static final fr.cobblepulse.battletower.data.RunState$Phase COUNTDOWN;
+  public static final fr.cobblepulse.battletower.data.RunState$Phase BATTLE;
+  public static final fr.cobblepulse.battletower.data.RunState$Phase TRANSIT;
+  public static final fr.cobblepulse.battletower.data.RunState$Phase BOSS;
+  private static final fr.cobblepulse.battletower.data.RunState$Phase[] $VALUES;
+  public static fr.cobblepulse.battletower.data.RunState$Phase[] values();
+  public static fr.cobblepulse.battletower.data.RunState$Phase valueOf(java.lang.String);
+  private fr.cobblepulse.battletower.data.RunState$Phase();
+  private static fr.cobblepulse.battletower.data.RunState$Phase[] $values();
+  static {};
+}
+Compiled from "BattlePoints.java"
+public final class fr.cobblepulse.battletower.economy.BattlePoints {
+  private fr.cobblepulse.battletower.economy.BattlePoints();
+  public static long baseForFloor(int);
+  private static java.lang.String quoteIfNeeded(java.lang.String);
+  public static double multiplier(net.minecraft.class_3222);
+  public static long forFloor(int, net.minecraft.class_3222);
+  public static void give(fr.cobblepulse.battletower.data.PlayerData, long);
+  public static boolean take(fr.cobblepulse.battletower.data.PlayerData, long);
+  public static void milestone(int, net.minecraft.class_3222, fr.cobblepulse.battletower.data.PlayerData);
+  public static void finalReward(net.minecraft.class_3222, fr.cobblepulse.battletower.data.PlayerData);
+}
+Compiled from "PlayerStore.java"
+public final class fr.cobblepulse.battletower.storage.PlayerStore {
+  private static final java.util.Map<java.lang.String, fr.cobblepulse.battletower.data.PlayerData> ALL;
+  private static final java.util.Map<java.lang.String, java.lang.String> BY_NAME;
+  private static java.util.List<fr.cobblepulse.battletower.data.PlayerData> ranking;
+  private static final java.util.Map<java.lang.String, java.lang.Integer> RANKS;
+  private static boolean rankDirty;
+  public static final java.util.Comparator<fr.cobblepulse.battletower.data.PlayerData> ORDER;
+  private fr.cobblepulse.battletower.storage.PlayerStore();
+  public static void load();
+  public static fr.cobblepulse.battletower.data.PlayerData get(java.util.UUID);
+  public static fr.cobblepulse.battletower.data.PlayerData get(net.minecraft.class_3222);
+  public static fr.cobblepulse.battletower.data.PlayerData getOrCreate(java.util.UUID, java.lang.String);
+  public static fr.cobblepulse.battletower.data.PlayerData byName(java.lang.String);
+  public static void save(fr.cobblepulse.battletower.data.PlayerData);
+  public static java.util.List<java.lang.String> names();
+  public static void rebuildRanking();
+  public static java.util.List<fr.cobblepulse.battletower.data.PlayerData> top(int);
+  public static int rank(java.lang.String);
+  public static int rankedCount();
+  public static void clear();
+  private static java.lang.String lambda$static$4(fr.cobblepulse.battletower.data.PlayerData);
+  private static long lambda$static$3(fr.cobblepulse.battletower.data.PlayerData);
+  private static int lambda$static$2(fr.cobblepulse.battletower.data.PlayerData);
+  private static int lambda$static$1(fr.cobblepulse.battletower.data.PlayerData);
+  private static int lambda$static$0(fr.cobblepulse.battletower.data.PlayerData);
+  static {};
+}
+Compiled from "DailyBoss.java"
+public final class fr.cobblepulse.battletower.tower.DailyBoss {
+  private fr.cobblepulse.battletower.tower.DailyBoss();
+  public static java.time.ZoneId zone();
+  public static java.lang.String today();
+  public static boolean enabled();
+  public static void init();
+  public static java.lang.String bossFor(java.time.LocalDate);
+  public static void rotateIfNeeded(boolean);
+  public static java.lang.String currentId();
+  public static fr.cobblepulse.battletower.data.TrainerSpec current();
+  public static com.cobblemon.mod.common.entity.npc.NPCEntity npc(net.minecraft.server.MinecraftServer);
+  public static boolean attemptedToday(fr.cobblepulse.battletower.data.PlayerData);
+  public static fr.cobblepulse.battletower.config.TomlFile rewards(java.lang.String);
+  public static java.util.List<java.lang.String> rewardDisplay(java.lang.String);
+  public static void start(net.minecraft.class_3222);
+  static void arrive(net.minecraft.class_3222, fr.cobblepulse.battletower.data.RunState);
+  static void consumeAttempt(net.minecraft.class_3222);
+  static void onResult(fr.cobblepulse.battletower.battle.TowerBattle$Outcome, fr.cobblepulse.battletower.data.RunState, net.minecraft.class_3222);
+  static void logDisconnect(fr.cobblepulse.battletower.data.RunState);
+  public static java.lang.String status(fr.cobblepulse.battletower.data.PlayerData);
+  private static void lambda$init$0();
+}
+Compiled from "TowerManager.java"
+public final class fr.cobblepulse.battletower.tower.TowerManager {
+  public static final int BOSS_QUEUE;
+  private static fr.cobblepulse.battletower.tower.TowerState state;
+  private static final java.util.Map<java.lang.Integer, java.util.Deque<java.util.UUID>> QUEUES;
+  public static int testFloorLimit;
+  private fr.cobblepulse.battletower.tower.TowerManager();
+  public static fr.cobblepulse.battletower.tower.TowerState state();
+  public static int totalFloors();
+  public static void load();
+  public static void save();
+  public static void onServerStopping();
+  public static void clearRuntime();
+  public static fr.cobblepulse.battletower.data.RunState run(java.util.UUID);
+  public static boolean inRun(java.util.UUID);
+  public static java.util.List<fr.cobblepulse.battletower.data.RunState> runs();
+  public static boolean isOpen();
+  public static void setOpen(boolean);
+  public static long cooldownLeft(fr.cobblepulse.battletower.data.PlayerData);
+  public static java.lang.String floorProblem(fr.cobblepulse.battletower.data.FloorEntry);
+  public static void startAssault(net.minecraft.class_3222);
+  static void arriveAtFloor(net.minecraft.class_3222, fr.cobblepulse.battletower.data.RunState);
+  private static void sendFloorInfo(net.minecraft.class_3222, fr.cobblepulse.battletower.data.RunState, fr.cobblepulse.battletower.data.FloorEntry);
+  public static void engage(net.minecraft.class_3222);
+  private static int queuePosition(fr.cobblepulse.battletower.data.RunState);
+  private static boolean isBusy(int, java.util.UUID);
+  private static com.cobblemon.mod.common.entity.npc.NPCEntity npcFor(int, boolean);
+  private static fr.cobblepulse.battletower.data.TrainerSpec trainerFor(fr.cobblepulse.battletower.data.RunState);
+  private static void beginCountdown(net.minecraft.class_3222, fr.cobblepulse.battletower.data.RunState);
+  private static void launch(net.minecraft.class_3222, fr.cobblepulse.battletower.data.RunState, fr.cobblepulse.battletower.data.TrainerSpec);
+  private static void releaseQueue(int);
+  private static void removeFromQueues(java.util.UUID);
+  private static void onBattleEnd(fr.cobblepulse.battletower.battle.TowerBattle$Outcome, fr.cobblepulse.battletower.data.RunState, int);
+  private static void onFloorWon(fr.cobblepulse.battletower.battle.TowerBattle$Outcome, fr.cobblepulse.battletower.data.RunState, net.minecraft.class_3222);
+  private static void complete(fr.cobblepulse.battletower.data.RunState, net.minecraft.class_3222, fr.cobblepulse.battletower.data.PlayerData);
+  public static void endRun(java.util.UUID, fr.cobblepulse.battletower.tower.TowerManager$EndReason, java.lang.String);
+  public static void abandon(net.minecraft.class_3222);
+  public static boolean disqualify(java.util.UUID, java.lang.String);
+  public static void openPc(net.minecraft.class_3222);
+  public static void onJoin(net.minecraft.class_3222);
+  public static void onQuit(net.minecraft.class_3222);
+  private static void tickSecond();
+  private static fr.cobblepulse.battletower.core.Loc anchor(fr.cobblepulse.battletower.data.RunState);
+  static fr.cobblepulse.battletower.data.RunState startDaily(net.minecraft.class_3222, java.lang.String);
+  private static void lambda$onJoin$14(net.minecraft.class_3222, java.lang.String);
+  private static void lambda$onJoin$13(net.minecraft.class_3222, fr.cobblepulse.battletower.core.Loc);
+  private static void lambda$onJoin$12(net.minecraft.class_3222, fr.cobblepulse.battletower.data.RunState);
+  private static void lambda$endRun$11(int);
+  private static void lambda$endRun$10(net.minecraft.class_3222, java.util.UUID, fr.cobblepulse.battletower.core.Loc);
+  private static void lambda$onFloorWon$9(fr.cobblepulse.battletower.battle.TowerBattle$Outcome, fr.cobblepulse.battletower.data.RunState);
+  private static void lambda$onBattleEnd$8(int);
+  private static void lambda$launch$7(fr.cobblepulse.battletower.data.RunState, int, fr.cobblepulse.battletower.battle.TowerBattle$Outcome);
+  private static void lambda$launch$6(fr.cobblepulse.battletower.battle.TowerBattle$Outcome, fr.cobblepulse.battletower.data.RunState, int);
+  private static void lambda$beginCountdown$5(net.minecraft.class_3222, fr.cobblepulse.battletower.data.RunState, long, fr.cobblepulse.battletower.data.TrainerSpec);
+  private static void lambda$beginCountdown$4(fr.cobblepulse.battletower.data.RunState, long, net.minecraft.class_3222, int, fr.cobblepulse.battletower.data.TrainerSpec, int);
+  private static java.util.Deque lambda$engage$3(java.lang.Integer);
+  private static void lambda$arriveAtFloor$2(net.minecraft.class_3222, fr.cobblepulse.battletower.data.RunState);
+  private static java.lang.Object lambda$save$1();
+  private static java.lang.String lambda$load$0(fr.cobblepulse.battletower.storage.Storage) throws java.lang.Exception;
+  static {};
+}
+Compiled from "TowerManager.java"
+public final class fr.cobblepulse.battletower.tower.TowerManager$EndReason extends java.lang.Enum<fr.cobblepulse.battletower.tower.TowerManager$EndReason> {
+  public static final fr.cobblepulse.battletower.tower.TowerManager$EndReason COMPLETED;
+  public static final fr.cobblepulse.battletower.tower.TowerManager$EndReason DEFEAT;
+  public static final fr.cobblepulse.battletower.tower.TowerManager$EndReason ABANDON;
+  public static final fr.cobblepulse.battletower.tower.TowerManager$EndReason DISCONNECT;
+  public static final fr.cobblepulse.battletower.tower.TowerManager$EndReason DISQUALIFIED;
+  public static final fr.cobblepulse.battletower.tower.TowerManager$EndReason CANCELLED;
+  public static final fr.cobblepulse.battletower.tower.TowerManager$EndReason DAILY_DONE;
+  private static final fr.cobblepulse.battletower.tower.TowerManager$EndReason[] $VALUES;
+  public static fr.cobblepulse.battletower.tower.TowerManager$EndReason[] values();
+  public static fr.cobblepulse.battletower.tower.TowerManager$EndReason valueOf(java.lang.String);
+  private fr.cobblepulse.battletower.tower.TowerManager$EndReason();
+  private static fr.cobblepulse.battletower.tower.TowerManager$EndReason[] $values();
+  static {};
+}

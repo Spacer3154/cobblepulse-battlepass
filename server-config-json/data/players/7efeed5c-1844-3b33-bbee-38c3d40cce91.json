@@ -1,0 +1,60 @@
+{
+  "uuid": "7efeed5c-1844-3b33-bbee-38c3d40cce91",
+  "name": "BPHunter",
+  "saison": 1,
+  "points": 200,
+  "premium": false,
+  "premiumSource": "",
+  "premiumDepuis": 0,
+  "reclames": [],
+  "progression": {
+    "h|w2026-11-09|pokedex_10": 3,
+    "s|s1|connexion_20": 1,
+    "s|s1|chasses_25": 1,
+    "s|s1|pokedex_100": 3
+  },
+  "terminees": [],
+  "dernierJour": "2026-11-15",
+  "serie": 1,
+  "joursConnexion": 1,
+  "meilleureSerie": 1,
+  "dernierPalierAnnonce": 0,
+  "chasses": {
+    "normal": {
+      "entry": {
+        "espece": "eevee",
+        "forme": "",
+        "aspects": [],
+        "genre": "male",
+        "nature": "adamant",
+        "ivParfaits": 1,
+        "poids": 1.0
+      },
+      "genre": "male",
+      "nature": "adamant",
+      "ivs": [
+        "atk"
+      ],
+      "debut": 1794742656715,
+      "fin": 1794744456715
+    }
+  },
+  "apercus": {},
+  "recharges": {},
+  "globalesFaites": [],
+  "captures": {
+    "f2d119ed-2255-43fc-966c-64e58110db9c": 1794742655699,
+    "d2bf7982-fac6-4081-9c0f-791f1c21d35c": 1794742656703,
+    "96ea8bc4-9cbd-41ea-ab7b-8658ac64b0d9": 1794742656704,
+    "e064760c-fbab-4e70-b0c3-48a504c04acd": 1794742656716
+  },
+  "pokemonRemis": [
+    "96ea8bc4-9cbd-41ea-ab7b-8658ac64b0d9"
+  ],
+  "chassesTerminees": 1,
+  "pointsQuetes": 0,
+  "pointsConnexion": 100,
+  "pointsChasses": 100,
+  "pointsStaff": 0,
+  "quetesTerminees": 0
+}

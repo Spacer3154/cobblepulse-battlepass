@@ -1,0 +1,1699 @@
+{
+  "paliers": {
+    "1": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:poke_ball",
+            "count": 16
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 8
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        },
+        {
+          "type": "bp_battletower",
+          "nom": "",
+          "icone": "",
+          "commandes": [],
+          "montant": 100.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "2": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "3": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:great_ball",
+            "count": 8
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "4": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "5": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:rare_candy",
+            "count": 2
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_l",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "6": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:great_ball",
+            "count": 8
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "7": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:poke_ball",
+            "count": 16
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "8": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "9": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:great_ball",
+            "count": 8
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "10": {
+      "gratuit": [
+        {
+          "type": "pokemon",
+          "nom": "",
+          "icone": "",
+          "pokemon": {
+            "species": "eevee",
+            "form": "",
+            "nickname": "",
+            "level": 10,
+            "nature": "",
+            "ability": "",
+            "gender": "",
+            "shiny": false,
+            "held_item": "",
+            "ball": "cobblemon:premier_ball",
+            "ivs": {
+              "hp": 31,
+              "atk": -1,
+              "def": -1,
+              "spa": -1,
+              "spd": -1,
+              "spe": 31
+            },
+            "evs": {
+              "hp": 0,
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0
+            },
+            "moves": [],
+            "tera_type": ""
+          },
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "pokemon",
+          "nom": "",
+          "icone": "",
+          "pokemon": {
+            "species": "eevee",
+            "form": "",
+            "nickname": "",
+            "level": 20,
+            "nature": "jolly",
+            "ability": "",
+            "gender": "",
+            "shiny": true,
+            "held_item": "",
+            "ball": "cobblemon:premier_ball",
+            "ivs": {
+              "hp": 31,
+              "atk": 31,
+              "def": -1,
+              "spa": -1,
+              "spd": -1,
+              "spe": 31
+            },
+            "evs": {
+              "hp": 0,
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0
+            },
+            "moves": [],
+            "tera_type": ""
+          },
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "11": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:poke_ball",
+            "count": 16
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "12": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:great_ball",
+            "count": 8
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "13": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:poke_ball",
+            "count": 16
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "14": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "15": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:rare_candy",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_l",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "16": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "17": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:poke_ball",
+            "count": 16
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "18": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:great_ball",
+            "count": 8
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "19": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:poke_ball",
+            "count": 16
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "20": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:rare_candy",
+            "count": 4
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "bp_battletower",
+          "nom": "",
+          "icone": "",
+          "commandes": [],
+          "montant": 500.0,
+          "chance": 1.0
+        },
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ability_capsule",
+            "count": 1
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "21": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:great_ball",
+            "count": 8
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "22": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "23": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:poke_ball",
+            "count": 16
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "24": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:great_ball",
+            "count": 8
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "25": {
+      "gratuit": [
+        {
+          "type": "pokemon",
+          "nom": "",
+          "icone": "",
+          "pokemon": {
+            "species": "riolu",
+            "form": "",
+            "nickname": "",
+            "level": 15,
+            "nature": "",
+            "ability": "",
+            "gender": "",
+            "shiny": false,
+            "held_item": "",
+            "ball": "",
+            "ivs": {
+              "hp": -1,
+              "atk": 31,
+              "def": -1,
+              "spa": -1,
+              "spd": -1,
+              "spe": -1
+            },
+            "evs": {
+              "hp": 0,
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0
+            },
+            "moves": [],
+            "tera_type": ""
+          },
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "pokemon",
+          "nom": "",
+          "icone": "",
+          "pokemon": {
+            "species": "larvitar",
+            "form": "",
+            "nickname": "",
+            "level": 25,
+            "nature": "adamant",
+            "ability": "",
+            "gender": "",
+            "shiny": true,
+            "held_item": "cobblemon:leftovers",
+            "ball": "",
+            "ivs": {
+              "hp": 31,
+              "atk": 31,
+              "def": 31,
+              "spa": -1,
+              "spd": -1,
+              "spe": -1
+            },
+            "evs": {
+              "hp": 252,
+              "atk": 252,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0
+            },
+            "moves": [],
+            "tera_type": ""
+          },
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "26": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "27": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:great_ball",
+            "count": 8
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "28": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "29": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:poke_ball",
+            "count": 16
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "30": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:rare_candy",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "coins_jobs",
+          "nom": "",
+          "icone": "",
+          "commandes": [],
+          "montant": 500.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "31": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:poke_ball",
+            "count": 16
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "32": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "33": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:great_ball",
+            "count": 8
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "34": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "35": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:rare_candy",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_l",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "36": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:great_ball",
+            "count": 8
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "37": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:poke_ball",
+            "count": 16
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "38": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "39": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:great_ball",
+            "count": 8
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "40": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:rare_candy",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "commande",
+          "nom": "&d1000 points d'expérience",
+          "icone": "minecraft:experience_bottle",
+          "commandes": [
+            "xp add %player% 1000 points"
+          ],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "41": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:poke_ball",
+            "count": 16
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "42": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:great_ball",
+            "count": 8
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "43": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:poke_ball",
+            "count": 16
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "44": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "45": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:rare_candy",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_l",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "46": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 3
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "47": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:poke_ball",
+            "count": 16
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "48": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:great_ball",
+            "count": 8
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:ultra_ball",
+            "count": 6
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "49": {
+      "gratuit": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:poke_ball",
+            "count": 16
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:exp_candy_m",
+            "count": 5
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    },
+    "50": {
+      "gratuit": [
+        {
+          "type": "pokemon",
+          "nom": "",
+          "icone": "",
+          "pokemon": {
+            "species": "dratini",
+            "form": "",
+            "nickname": "",
+            "level": 20,
+            "nature": "",
+            "ability": "",
+            "gender": "",
+            "shiny": false,
+            "held_item": "",
+            "ball": "",
+            "ivs": {
+              "hp": 31,
+              "atk": 31,
+              "def": -1,
+              "spa": -1,
+              "spd": -1,
+              "spe": 31
+            },
+            "evs": {
+              "hp": 0,
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0
+            },
+            "moves": [],
+            "tera_type": ""
+          },
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        },
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:master_ball",
+            "count": 1
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ],
+      "premium": [
+        {
+          "type": "pokemon",
+          "nom": "",
+          "icone": "",
+          "pokemon": {
+            "species": "dratini",
+            "form": "",
+            "nickname": "Saison 1",
+            "level": 30,
+            "nature": "adamant",
+            "ability": "",
+            "gender": "",
+            "shiny": true,
+            "held_item": "cobblemon:life_orb",
+            "ball": "cobblemon:cherish_ball",
+            "ivs": {
+              "hp": 31,
+              "atk": 31,
+              "def": 31,
+              "spa": 31,
+              "spd": 31,
+              "spe": 31
+            },
+            "evs": {
+              "hp": 0,
+              "atk": 252,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 252
+            },
+            "moves": [
+              "dragondance",
+              "extremespeed",
+              "aquatail",
+              "outrage"
+            ],
+            "tera_type": ""
+          },
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        },
+        {
+          "type": "objet",
+          "nom": "",
+          "objet": {
+            "id": "cobblemon:master_ball",
+            "count": 2
+          },
+          "icone": "",
+          "commandes": [],
+          "montant": 0.0,
+          "chance": 1.0
+        }
+      ]
+    }
+  }
+}

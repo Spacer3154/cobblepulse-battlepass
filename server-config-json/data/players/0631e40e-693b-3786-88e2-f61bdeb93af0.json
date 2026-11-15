@@ -1,0 +1,97 @@
+{
+  "uuid": "0631e40e-693b-3786-88e2-f61bdeb93af0",
+  "name": "BPView",
+  "saison": 1,
+  "points": 0,
+  "premium": false,
+  "premiumSource": "",
+  "premiumDepuis": 0,
+  "reclames": [],
+  "progression": {},
+  "terminees": [],
+  "dernierJour": "",
+  "serie": 0,
+  "joursConnexion": 0,
+  "meilleureSerie": 0,
+  "dernierPalierAnnonce": 0,
+  "chasses": {},
+  "apercus": {
+    "normal": {
+      "entry": {
+        "espece": "buneary",
+        "forme": "",
+        "aspects": [],
+        "genre": "male",
+        "nature": "",
+        "ivParfaits": 0,
+        "poids": 1.0
+      },
+      "genre": "male",
+      "nature": "",
+      "ivs": [],
+      "debut": 0,
+      "fin": 0
+    },
+    "moyen": {
+      "entry": {
+        "espece": "shellder",
+        "forme": "",
+        "aspects": [],
+        "genre": "femelle",
+        "nature": "naughty",
+        "ivParfaits": 0,
+        "poids": 1.0
+      },
+      "genre": "female",
+      "nature": "naughty",
+      "ivs": [],
+      "debut": 0,
+      "fin": 0
+    },
+    "difficile": {
+      "entry": {
+        "espece": "snorlax",
+        "forme": "",
+        "aspects": [],
+        "genre": "femelle",
+        "nature": "relaxed",
+        "ivParfaits": 2,
+        "poids": 1.0
+      },
+      "genre": "female",
+      "nature": "relaxed",
+      "ivs": [
+        "spd",
+        "def"
+      ],
+      "debut": 0,
+      "fin": 0
+    },
+    "facile": {
+      "entry": {
+        "espece": "rattata",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "ivParfaits": 0,
+        "poids": 1.0
+      },
+      "genre": "",
+      "nature": "",
+      "ivs": [],
+      "debut": 0,
+      "fin": 0
+    }
+  },
+  "recharges": {},
+  "globalesFaites": [],
+  "captures": {},
+  "pokemonRemis": [],
+  "chassesTerminees": 0,
+  "pointsQuetes": 0,
+  "pointsConnexion": 0,
+  "pointsChasses": 0,
+  "pointsStaff": 0,
+  "quetesTerminees": 0
+}

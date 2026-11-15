@@ -1,0 +1,33 @@
+{
+  "uuid": "d1e4b0ce-5b4c-34fd-ade3-f829e18bd0aa",
+  "name": "BPPersist",
+  "saison": 1,
+  "points": 4321,
+  "premium": true,
+  "premiumSource": "test",
+  "premiumDepuis": 1794742656804,
+  "reclames": [
+    "g:1"
+  ],
+  "progression": {
+    "s|s1|connexion_20": 1
+  },
+  "terminees": [],
+  "dernierJour": "2026-11-15",
+  "serie": 1,
+  "joursConnexion": 1,
+  "meilleureSerie": 1,
+  "dernierPalierAnnonce": 0,
+  "chasses": {},
+  "apercus": {},
+  "recharges": {},
+  "globalesFaites": [],
+  "captures": {},
+  "pokemonRemis": [],
+  "chassesTerminees": 0,
+  "pointsQuetes": 0,
+  "pointsConnexion": 100,
+  "pointsChasses": 0,
+  "pointsStaff": 0,
+  "quetesTerminees": 0
+}

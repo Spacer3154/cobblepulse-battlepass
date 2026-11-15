@@ -1,0 +1,234 @@
+Compiled from "TowerManager.java"
+public final class fr.cobblepulse.battletower.tower.TowerManager {
+  public static final int BOSS_QUEUE;
+    descriptor: I
+  private static fr.cobblepulse.battletower.tower.TowerState state;
+    descriptor: Lfr/cobblepulse/battletower/tower/TowerState;
+  private static final java.util.Map<java.lang.Integer, java.util.Deque<java.util.UUID>> QUEUES;
+    descriptor: Ljava/util/Map;
+  public static int testFloorLimit;
+    descriptor: I
+  private fr.cobblepulse.battletower.tower.TowerManager();
+    descriptor: ()V
+
+  public static fr.cobblepulse.battletower.tower.TowerState state();
+    descriptor: ()Lfr/cobblepulse/battletower/tower/TowerState;
+
+  public static int totalFloors();
+    descriptor: ()I
+
+  public static void load();
+    descriptor: ()V
+
+  public static void save();
+    descriptor: ()V
+
+  public static void onServerStopping();
+    descriptor: ()V
+
+  public static void clearRuntime();
+    descriptor: ()V
+
+  public static fr.cobblepulse.battletower.data.RunState run(java.util.UUID);
+    descriptor: (Ljava/util/UUID;)Lfr/cobblepulse/battletower/data/RunState;
+
+  public static boolean inRun(java.util.UUID);
+    descriptor: (Ljava/util/UUID;)Z
+
+  public static java.util.List<fr.cobblepulse.battletower.data.RunState> runs();
+    descriptor: ()Ljava/util/List;
+
+  public static boolean isOpen();
+    descriptor: ()Z
+
+  public static void setOpen(boolean);
+    descriptor: (Z)V
+
+  public static long cooldownLeft(fr.cobblepulse.battletower.data.PlayerData);
+    descriptor: (Lfr/cobblepulse/battletower/data/PlayerData;)J
+
+  public static java.lang.String floorProblem(fr.cobblepulse.battletower.data.FloorEntry);
+    descriptor: (Lfr/cobblepulse/battletower/data/FloorEntry;)Ljava/lang/String;
+
+  public static void startAssault(net.minecraft.class_3222);
+    descriptor: (Lnet/minecraft/class_3222;)V
+
+  static void arriveAtFloor(net.minecraft.class_3222, fr.cobblepulse.battletower.data.RunState);
+    descriptor: (Lnet/minecraft/class_3222;Lfr/cobblepulse/battletower/data/RunState;)V
+
+  private static void sendFloorInfo(net.minecraft.class_3222, fr.cobblepulse.battletower.data.RunState, fr.cobblepulse.battletower.data.FloorEntry);
+    descriptor: (Lnet/minecraft/class_3222;Lfr/cobblepulse/battletower/data/RunState;Lfr/cobblepulse/battletower/data/FloorEntry;)V
+
+  public static void engage(net.minecraft.class_3222);
+    descriptor: (Lnet/minecraft/class_3222;)V
+
+  private static int queuePosition(fr.cobblepulse.battletower.data.RunState);
+    descriptor: (Lfr/cobblepulse/battletower/data/RunState;)I
+
+  private static boolean isBusy(int, java.util.UUID);
+    descriptor: (ILjava/util/UUID;)Z
+
+  private static com.cobblemon.mod.common.entity.npc.NPCEntity npcFor(int, boolean);
+    descriptor: (IZ)Lcom/cobblemon/mod/common/entity/npc/NPCEntity;
+
+  private static fr.cobblepulse.battletower.data.TrainerSpec trainerFor(fr.cobblepulse.battletower.data.RunState);
+    descriptor: (Lfr/cobblepulse/battletower/data/RunState;)Lfr/cobblepulse/battletower/data/TrainerSpec;
+
+  private static void beginCountdown(net.minecraft.class_3222, fr.cobblepulse.battletower.data.RunState);
+    descriptor: (Lnet/minecraft/class_3222;Lfr/cobblepulse/battletower/data/RunState;)V
+
+  private static void launch(net.minecraft.class_3222, fr.cobblepulse.battletower.data.RunState, fr.cobblepulse.battletower.data.TrainerSpec);
+    descriptor: (Lnet/minecraft/class_3222;Lfr/cobblepulse/battletower/data/RunState;Lfr/cobblepulse/battletower/data/TrainerSpec;)V
+
+  private static void releaseQueue(int);
+    descriptor: (I)V
+
+  private static void removeFromQueues(java.util.UUID);
+    descriptor: (Ljava/util/UUID;)V
+
+  private static void onBattleEnd(fr.cobblepulse.battletower.battle.TowerBattle$Outcome, fr.cobblepulse.battletower.data.RunState, int);
+    descriptor: (Lfr/cobblepulse/battletower/battle/TowerBattle$Outcome;Lfr/cobblepulse/battletower/data/RunState;I)V
+
+  private static void onFloorWon(fr.cobblepulse.battletower.battle.TowerBattle$Outcome, fr.cobblepulse.battletower.data.RunState, net.minecraft.class_3222);
+    descriptor: (Lfr/cobblepulse/battletower/battle/TowerBattle$Outcome;Lfr/cobblepulse/battletower/data/RunState;Lnet/minecraft/class_3222;)V
+
+  private static void complete(fr.cobblepulse.battletower.data.RunState, net.minecraft.class_3222, fr.cobblepulse.battletower.data.PlayerData);
+    descriptor: (Lfr/cobblepulse/battletower/data/RunState;Lnet/minecraft/class_3222;Lfr/cobblepulse/battletower/data/PlayerData;)V
+
+  public static void endRun(java.util.UUID, fr.cobblepulse.battletower.tower.TowerManager$EndReason, java.lang.String);
+    descriptor: (Ljava/util/UUID;Lfr/cobblepulse/battletower/tower/TowerManager$EndReason;Ljava/lang/String;)V
+
+  public static void abandon(net.minecraft.class_3222);
+    descriptor: (Lnet/minecraft/class_3222;)V
+
+  public static boolean disqualify(java.util.UUID, java.lang.String);
+    descriptor: (Ljava/util/UUID;Ljava/lang/String;)Z
+
+  public static void openPc(net.minecraft.class_3222);
+    descriptor: (Lnet/minecraft/class_3222;)V
+
+  public static void onJoin(net.minecraft.class_3222);
+    descriptor: (Lnet/minecraft/class_3222;)V
+
+  public static void onQuit(net.minecraft.class_3222);
+    descriptor: (Lnet/minecraft/class_3222;)V
+
+  private static void tickSecond();
+    descriptor: ()V
+
+  private static fr.cobblepulse.battletower.core.Loc anchor(fr.cobblepulse.battletower.data.RunState);
+    descriptor: (Lfr/cobblepulse/battletower/data/RunState;)Lfr/cobblepulse/battletower/core/Loc;
+
+  static fr.cobblepulse.battletower.data.RunState startDaily(net.minecraft.class_3222, java.lang.String);
+    descriptor: (Lnet/minecraft/class_3222;Ljava/lang/String;)Lfr/cobblepulse/battletower/data/RunState;
+
+  private static void lambda$onJoin$14(net.minecraft.class_3222, java.lang.String);
+    descriptor: (Lnet/minecraft/class_3222;Ljava/lang/String;)V
+
+  private static void lambda$onJoin$13(net.minecraft.class_3222, fr.cobblepulse.battletower.core.Loc);
+    descriptor: (Lnet/minecraft/class_3222;Lfr/cobblepulse/battletower/core/Loc;)V
+
+  private static void lambda$onJoin$12(net.minecraft.class_3222, fr.cobblepulse.battletower.data.RunState);
+    descriptor: (Lnet/minecraft/class_3222;Lfr/cobblepulse/battletower/data/RunState;)V
+
+  private static void lambda$endRun$11(int);
+    descriptor: (I)V
+
+  private static void lambda$endRun$10(net.minecraft.class_3222, java.util.UUID, fr.cobblepulse.battletower.core.Loc);
+    descriptor: (Lnet/minecraft/class_3222;Ljava/util/UUID;Lfr/cobblepulse/battletower/core/Loc;)V
+
+  private static void lambda$onFloorWon$9(fr.cobblepulse.battletower.battle.TowerBattle$Outcome, fr.cobblepulse.battletower.data.RunState);
+    descriptor: (Lfr/cobblepulse/battletower/battle/TowerBattle$Outcome;Lfr/cobblepulse/battletower/data/RunState;)V
+
+  private static void lambda$onBattleEnd$8(int);
+    descriptor: (I)V
+
+  private static void lambda$launch$7(fr.cobblepulse.battletower.data.RunState, int, fr.cobblepulse.battletower.battle.TowerBattle$Outcome);
+    descriptor: (Lfr/cobblepulse/battletower/data/RunState;ILfr/cobblepulse/battletower/battle/TowerBattle$Outcome;)V
+
+  private static void lambda$launch$6(fr.cobblepulse.battletower.battle.TowerBattle$Outcome, fr.cobblepulse.battletower.data.RunState, int);
+    descriptor: (Lfr/cobblepulse/battletower/battle/TowerBattle$Outcome;Lfr/cobblepulse/battletower/data/RunState;I)V
+
+  private static void lambda$beginCountdown$5(net.minecraft.class_3222, fr.cobblepulse.battletower.data.RunState, long, fr.cobblepulse.battletower.data.TrainerSpec);
+    descriptor: (Lnet/minecraft/class_3222;Lfr/cobblepulse/battletower/data/RunState;JLfr/cobblepulse/battletower/data/TrainerSpec;)V
+
+  private static void lambda$beginCountdown$4(fr.cobblepulse.battletower.data.RunState, long, net.minecraft.class_3222, int, fr.cobblepulse.battletower.data.TrainerSpec, int);
+    descriptor: (Lfr/cobblepulse/battletower/data/RunState;JLnet/minecraft/class_3222;ILfr/cobblepulse/battletower/data/TrainerSpec;I)V
+
+  private static java.util.Deque lambda$engage$3(java.lang.Integer);
+    descriptor: (Ljava/lang/Integer;)Ljava/util/Deque;
+
+  private static void lambda$arriveAtFloor$2(net.minecraft.class_3222, fr.cobblepulse.battletower.data.RunState);
+    descriptor: (Lnet/minecraft/class_3222;Lfr/cobblepulse/battletower/data/RunState;)V
+
+  private static java.lang.Object lambda$save$1();
+    descriptor: ()Ljava/lang/Object;
+
+  private static java.lang.String lambda$load$0(fr.cobblepulse.battletower.storage.Storage) throws java.lang.Exception;
+    descriptor: (Lfr/cobblepulse/battletower/storage/Storage;)Ljava/lang/String;
+
+  static {};
+    descriptor: ()V
+}
+Compiled from "DailyBoss.java"
+public final class fr.cobblepulse.battletower.tower.DailyBoss {
+  private fr.cobblepulse.battletower.tower.DailyBoss();
+    descriptor: ()V
+
+  public static java.time.ZoneId zone();
+    descriptor: ()Ljava/time/ZoneId;
+
+  public static java.lang.String today();
+    descriptor: ()Ljava/lang/String;
+
+  public static boolean enabled();
+    descriptor: ()Z
+
+  public static void init();
+    descriptor: ()V
+
+  public static java.lang.String bossFor(java.time.LocalDate);
+    descriptor: (Ljava/time/LocalDate;)Ljava/lang/String;
+
+  public static void rotateIfNeeded(boolean);
+    descriptor: (Z)V
+
+  public static java.lang.String currentId();
+    descriptor: ()Ljava/lang/String;
+
+  public static fr.cobblepulse.battletower.data.TrainerSpec current();
+    descriptor: ()Lfr/cobblepulse/battletower/data/TrainerSpec;
+
+  public static com.cobblemon.mod.common.entity.npc.NPCEntity npc(net.minecraft.server.MinecraftServer);
+    descriptor: (Lnet/minecraft/server/MinecraftServer;)Lcom/cobblemon/mod/common/entity/npc/NPCEntity;
+
+  public static boolean attemptedToday(fr.cobblepulse.battletower.data.PlayerData);
+    descriptor: (Lfr/cobblepulse/battletower/data/PlayerData;)Z
+
+  public static fr.cobblepulse.battletower.config.TomlFile rewards(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lfr/cobblepulse/battletower/config/TomlFile;
+
+  public static java.util.List<java.lang.String> rewardDisplay(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/util/List;
+
+  public static void start(net.minecraft.class_3222);
+    descriptor: (Lnet/minecraft/class_3222;)V
+
+  static void arrive(net.minecraft.class_3222, fr.cobblepulse.battletower.data.RunState);
+    descriptor: (Lnet/minecraft/class_3222;Lfr/cobblepulse/battletower/data/RunState;)V
+
+  static void consumeAttempt(net.minecraft.class_3222);
+    descriptor: (Lnet/minecraft/class_3222;)V
+
+  static void onResult(fr.cobblepulse.battletower.battle.TowerBattle$Outcome, fr.cobblepulse.battletower.data.RunState, net.minecraft.class_3222);
+    descriptor: (Lfr/cobblepulse/battletower/battle/TowerBattle$Outcome;Lfr/cobblepulse/battletower/data/RunState;Lnet/minecraft/class_3222;)V
+
+  static void logDisconnect(fr.cobblepulse.battletower.data.RunState);
+    descriptor: (Lfr/cobblepulse/battletower/data/RunState;)V
+
+  public static java.lang.String status(fr.cobblepulse.battletower.data.PlayerData);
+    descriptor: (Lfr/cobblepulse/battletower/data/PlayerData;)Ljava/lang/String;
+
+  private static void lambda$init$0();
+    descriptor: ()V
+}

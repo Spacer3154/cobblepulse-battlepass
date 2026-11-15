@@ -1,0 +1,31 @@
+{
+  "uuid": "7b020db2-4591-3a1e-b4cb-3aff37f77a86",
+  "name": "BPLogin",
+  "saison": 1,
+  "points": 2700,
+  "premium": false,
+  "premiumSource": "",
+  "premiumDepuis": 0,
+  "reclames": [],
+  "progression": {
+    "s|s1|connexion_20": 2
+  },
+  "terminees": [],
+  "dernierJour": "2026-11-15",
+  "serie": 1,
+  "joursConnexion": 2,
+  "meilleureSerie": 1,
+  "dernierPalierAnnonce": 2,
+  "chasses": {},
+  "apercus": {},
+  "recharges": {},
+  "globalesFaites": [],
+  "captures": {},
+  "pokemonRemis": [],
+  "chassesTerminees": 0,
+  "pointsQuetes": 0,
+  "pointsConnexion": 200,
+  "pointsChasses": 0,
+  "pointsStaff": 0,
+  "quetesTerminees": 0
+}

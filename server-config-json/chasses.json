@@ -1,0 +1,620 @@
+{
+  "actif": true,
+  "solo": {
+    "facile": {
+      "actif": true,
+      "duree": 1800,
+      "recharge": 600,
+      "points": 100,
+      "permission": ""
+    },
+    "normal": {
+      "actif": true,
+      "duree": 1800,
+      "recharge": 900,
+      "points": 200,
+      "permission": ""
+    },
+    "moyen": {
+      "actif": true,
+      "duree": 2700,
+      "recharge": 1200,
+      "points": 350,
+      "permission": ""
+    },
+    "difficile": {
+      "actif": true,
+      "duree": 3600,
+      "recharge": 1800,
+      "points": 600,
+      "permission": ""
+    }
+  },
+  "globale": {
+    "actif": true,
+    "simultanees": 3,
+    "duree": 3600,
+    "recharge": 900,
+    "points": 300,
+    "permission": ""
+  },
+  "acceptation_auto": false,
+  "prendre_pokemon": true,
+  "remise_auto_capture": false,
+  "capture_apres_debut": true,
+  "globales_verrouillees_pour_tous": false,
+  "mode_butin": "poids",
+  "iv_minimum": 20,
+  "pokemon": {
+    "facile": [
+      {
+        "espece": "pidgey",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "rattata",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "caterpie",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "weedle",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "zigzagoon",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "bidoof",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "patrat",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "lillipup",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "pidove",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "sentret",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      }
+    ],
+    "normal": [
+      {
+        "espece": "eevee",
+        "forme": "",
+        "aspects": [],
+        "genre": "male",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "pikachu",
+        "forme": "",
+        "aspects": [],
+        "genre": "femelle",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "buneary",
+        "forme": "",
+        "aspects": [],
+        "genre": "male",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "shinx",
+        "forme": "",
+        "aspects": [],
+        "genre": "femelle",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "staravia",
+        "forme": "",
+        "aspects": [],
+        "genre": "male",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "bibarel",
+        "forme": "",
+        "aspects": [],
+        "genre": "femelle",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "watchog",
+        "forme": "",
+        "aspects": [],
+        "genre": "male",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "herdier",
+        "forme": "",
+        "aspects": [],
+        "genre": "femelle",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "tranquill",
+        "forme": "",
+        "aspects": [],
+        "genre": "male",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "furret",
+        "forme": "",
+        "aspects": [],
+        "genre": "femelle",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      }
+    ],
+    "moyen": [
+      {
+        "espece": "growlithe",
+        "forme": "",
+        "aspects": [],
+        "genre": "male",
+        "nature": "adamant",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "machop",
+        "forme": "",
+        "aspects": [],
+        "genre": "femelle",
+        "nature": "brave",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "vulpix",
+        "forme": "",
+        "aspects": [],
+        "genre": "male",
+        "nature": "timid",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "sandshrew",
+        "forme": "",
+        "aspects": [],
+        "genre": "femelle",
+        "nature": "impish",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "geodude",
+        "forme": "",
+        "aspects": [],
+        "genre": "male",
+        "nature": "relaxed",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "ponyta",
+        "forme": "",
+        "aspects": [],
+        "genre": "femelle",
+        "nature": "jolly",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "doduo",
+        "forme": "",
+        "aspects": [],
+        "genre": "male",
+        "nature": "adamant",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "seel",
+        "forme": "",
+        "aspects": [],
+        "genre": "femelle",
+        "nature": "calm",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "grimer",
+        "forme": "",
+        "aspects": [],
+        "genre": "male",
+        "nature": "bold",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "shellder",
+        "forme": "",
+        "aspects": [],
+        "genre": "femelle",
+        "nature": "naughty",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      }
+    ],
+    "difficile": [
+      {
+        "espece": "dragonite",
+        "forme": "",
+        "aspects": [],
+        "genre": "male",
+        "nature": "adamant",
+        "iv_parfaits": 2,
+        "poids": 1.0
+      },
+      {
+        "espece": "snorlax",
+        "forme": "",
+        "aspects": [],
+        "genre": "femelle",
+        "nature": "relaxed",
+        "iv_parfaits": 2,
+        "poids": 1.0
+      },
+      {
+        "espece": "lapras",
+        "forme": "",
+        "aspects": [],
+        "genre": "male",
+        "nature": "modest",
+        "iv_parfaits": 2,
+        "poids": 1.0
+      },
+      {
+        "espece": "aerodactyl",
+        "forme": "",
+        "aspects": [],
+        "genre": "femelle",
+        "nature": "jolly",
+        "iv_parfaits": 2,
+        "poids": 1.0
+      },
+      {
+        "espece": "garchomp",
+        "forme": "",
+        "aspects": [],
+        "genre": "male",
+        "nature": "jolly",
+        "iv_parfaits": 2,
+        "poids": 1.0
+      },
+      {
+        "espece": "milotic",
+        "forme": "",
+        "aspects": [],
+        "genre": "femelle",
+        "nature": "bold",
+        "iv_parfaits": 2,
+        "poids": 1.0
+      },
+      {
+        "espece": "tyranitar",
+        "forme": "",
+        "aspects": [],
+        "genre": "male",
+        "nature": "adamant",
+        "iv_parfaits": 2,
+        "poids": 1.0
+      },
+      {
+        "espece": "salamence",
+        "forme": "",
+        "aspects": [],
+        "genre": "femelle",
+        "nature": "naive",
+        "iv_parfaits": 2,
+        "poids": 1.0
+      }
+    ],
+    "globale": [
+      {
+        "espece": "eevee",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "pikachu",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "growlithe",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "ponyta",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "machop",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "abra",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "gastly",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "magikarp",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "dratini",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      },
+      {
+        "espece": "larvitar",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "iv_parfaits": 0,
+        "poids": 1.0
+      }
+    ]
+  },
+  "butin": {
+    "facile": [
+      {
+        "type": "objet",
+        "nom": "",
+        "objet": {
+          "id": "cobblemon:poke_ball",
+          "count": 10
+        },
+        "icone": "",
+        "commandes": [],
+        "montant": 0.0,
+        "chance": 1.0
+      },
+      {
+        "type": "objet",
+        "nom": "",
+        "objet": {
+          "id": "cobblemon:oran_berry",
+          "count": 5
+        },
+        "icone": "",
+        "commandes": [],
+        "montant": 0.0,
+        "chance": 1.0
+      }
+    ],
+    "normal": [
+      {
+        "type": "objet",
+        "nom": "",
+        "objet": {
+          "id": "cobblemon:great_ball",
+          "count": 8
+        },
+        "icone": "",
+        "commandes": [],
+        "montant": 0.0,
+        "chance": 1.0
+      },
+      {
+        "type": "objet",
+        "nom": "",
+        "objet": {
+          "id": "cobblemon:exp_candy_s",
+          "count": 4
+        },
+        "icone": "",
+        "commandes": [],
+        "montant": 0.0,
+        "chance": 1.0
+      }
+    ],
+    "moyen": [
+      {
+        "type": "objet",
+        "nom": "",
+        "objet": {
+          "id": "cobblemon:ultra_ball",
+          "count": 6
+        },
+        "icone": "",
+        "commandes": [],
+        "montant": 0.0,
+        "chance": 1.0
+      },
+      {
+        "type": "objet",
+        "nom": "",
+        "objet": {
+          "id": "cobblemon:exp_candy_m",
+          "count": 4
+        },
+        "icone": "",
+        "commandes": [],
+        "montant": 0.0,
+        "chance": 1.0
+      }
+    ],
+    "difficile": [
+      {
+        "type": "objet",
+        "nom": "",
+        "objet": {
+          "id": "cobblemon:ultra_ball",
+          "count": 12
+        },
+        "icone": "",
+        "commandes": [],
+        "montant": 0.0,
+        "chance": 1.0
+      },
+      {
+        "type": "objet",
+        "nom": "",
+        "objet": {
+          "id": "cobblemon:rare_candy",
+          "count": 3
+        },
+        "icone": "",
+        "commandes": [],
+        "montant": 0.0,
+        "chance": 1.0
+      }
+    ],
+    "globale": [
+      {
+        "type": "objet",
+        "nom": "",
+        "objet": {
+          "id": "cobblemon:great_ball",
+          "count": 10
+        },
+        "icone": "",
+        "commandes": [],
+        "montant": 0.0,
+        "chance": 1.0
+      },
+      {
+        "type": "bp_battletower",
+        "nom": "",
+        "icone": "",
+        "commandes": [],
+        "montant": 50.0,
+        "chance": 1.0
+      }
+    ]
+  }
+}

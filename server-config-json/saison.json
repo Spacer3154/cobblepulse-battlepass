@@ -1,0 +1,50 @@
+{
+  "saison": 1,
+  "nom": "Saison 1",
+  "ouvert": true,
+  "jours": 30,
+  "debut": 1794742652336,
+  "fin_de_saison": "fermer",
+  "paliers": 50,
+  "points_par_palier": 1000,
+  "points_par_palier_liste": [],
+  "fuseau": "Europe/Paris",
+  "heure_reset": 0,
+  "jour_reset_hebdo": "MONDAY",
+  "selection_quetes": "joueur",
+  "quetes_quotidiennes": 3,
+  "quetes_quotidiennes_premium": 1,
+  "quetes_hebdomadaires": 5,
+  "quetes_hebdomadaires_premium": 2,
+  "bonus_premium_pourcent": 0,
+  "annonce_paliers": [
+    25,
+    50
+  ],
+  "premium": {
+    "actif": true,
+    "achat_en_jeu": "aucun",
+    "prix": 0.0,
+    "objet": "minecraft:diamond"
+  },
+  "connexion": {
+    "actif": true,
+    "points": 100,
+    "bonus_serie": {
+      "14": 1000,
+      "28": 2500,
+      "7": 500
+    },
+    "serie_cassee_si_jour_manque": true
+  },
+  "luckperms": {
+    "actif": true,
+    "groupe_gratuit": "passe_gratuit",
+    "groupe_premium": "passe_premium",
+    "poids": 5
+  },
+  "etoiles": {
+    "gratuit": "<#C8C8C8>☆</#> ",
+    "premium": "<#FFD24A>★</#> "
+  }
+}

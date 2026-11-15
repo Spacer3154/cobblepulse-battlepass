@@ -1,0 +1,52 @@
+mod fabric-api 0.116.18+1.21.1 -> fabric-api-0.116.18+1.21.1.jar
+mod fabric-language-kotlin 1.14.2+kotlin.2.4.21 -> fabric-language-kotlin-1.14.2+kotlin.2.4.21.jar
+mod luckperms v5.4.140-fabric -> LuckPerms-Fabric-5.4.140.jar
+mod placeholder-api 2.4.2+1.21 -> placeholder-api-2.4.2+1.21.jar
+mod cobblemon 1.8.4F -> Cobblemon-fabric-1.8.4+1.21.1.jar
+mod battletower (branche ci-output)
+mod battlepass build/libs/cobblepulse-battlepass-1.0.0.jar
+===== run json-1 =====
+server ready: True
+> passe selftest
+> passe selftest report
+[json-1] [11:37:42] [Server thread/INFO]: [BattlePass][selftest] SELFTEST SUMMARY pass=45 fail=0
+[json-1] [11:37:42] [Server thread/INFO]: SELFTEST SUMMARY pass=45 fail=0
+[json-1] [11:37:58] [Server thread/INFO]: [BattlePass][selftest] SELFTEST SUMMARY pass=45 fail=0
+[json-1] [11:37:58] [Server thread/INFO]: SELFTEST SUMMARY pass=45 fail=0
+exit code 0
+===== run json-2 =====
+server ready: True
+> passe selftest persisted
+[json-2] [11:38:34] [Server thread/INFO]: [BattlePass][selftest] SELFTEST SUMMARY pass=2 fail=0
+[json-2] [11:38:34] [Server thread/INFO]: SELFTEST SUMMARY pass=2 fail=0
+exit code 0
+===== run mysql-1 =====
+server ready: True
+> passe selftest
+> passe selftest report
+[mysql-1] [11:39:21] [Server thread/INFO]: [BattlePass][selftest] SELFTEST SUMMARY pass=45 fail=0
+[mysql-1] [11:39:21] [Server thread/INFO]: SELFTEST SUMMARY pass=45 fail=0
+[mysql-1] [11:39:37] [Server thread/INFO]: [BattlePass][selftest] SELFTEST SUMMARY pass=45 fail=0
+[mysql-1] [11:39:37] [Server thread/INFO]: SELFTEST SUMMARY pass=45 fail=0
+exit code 0
+===== run mysql-2 =====
+server ready: True
+> passe selftest persisted
+[mysql-2] [11:40:15] [Server thread/INFO]: [BattlePass][selftest] SELFTEST SUMMARY pass=2 fail=0
+[mysql-2] [11:40:15] [Server thread/INFO]: SELFTEST SUMMARY pass=2 fail=0
+exit code 0
+===== run sqlite-1 =====
+server ready: True
+> passe selftest
+> passe selftest report
+[sqlite-1] [11:41:01] [Server thread/INFO]: [BattlePass][selftest] SELFTEST SUMMARY pass=45 fail=0
+[sqlite-1] [11:41:01] [Server thread/INFO]: SELFTEST SUMMARY pass=45 fail=0
+[sqlite-1] [11:41:17] [Server thread/INFO]: [BattlePass][selftest] SELFTEST SUMMARY pass=45 fail=0
+[sqlite-1] [11:41:17] [Server thread/INFO]: SELFTEST SUMMARY pass=45 fail=0
+exit code 0
+===== run sqlite-2 =====
+server ready: True
+> passe selftest persisted
+[sqlite-2] [11:41:55] [Server thread/INFO]: [BattlePass][selftest] SELFTEST SUMMARY pass=2 fail=0
+[sqlite-2] [11:41:55] [Server thread/INFO]: SELFTEST SUMMARY pass=2 fail=0
+exit code 0

@@ -1,0 +1,34 @@
+{
+  "uuid": "b886a752-6fab-3cc3-8bf6-a21340499aa2",
+  "name": "BPRaw",
+  "saison": 1,
+  "points": 150,
+  "premium": false,
+  "premiumSource": "",
+  "premiumDepuis": 0,
+  "reclames": [],
+  "progression": {
+    "s|s1|t_saut": 3,
+    "s|s1|connexion_20": 1
+  },
+  "terminees": [
+    "s|s1|t_saut"
+  ],
+  "dernierJour": "2026-11-15",
+  "serie": 1,
+  "joursConnexion": 1,
+  "meilleureSerie": 1,
+  "dernierPalierAnnonce": 0,
+  "chasses": {},
+  "apercus": {},
+  "recharges": {},
+  "globalesFaites": [],
+  "captures": {},
+  "pokemonRemis": [],
+  "chassesTerminees": 0,
+  "pointsQuetes": 50,
+  "pointsConnexion": 100,
+  "pointsChasses": 0,
+  "pointsStaff": 0,
+  "quetesTerminees": 1
+}

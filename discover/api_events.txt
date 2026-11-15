@@ -1,0 +1,629 @@
+Compiled from "BattleFaintedEvent.java"
+public final class com.cobblemon.mod.common.api.events.battles.BattleFaintedEvent implements com.cobblemon.mod.common.api.events.battles.BattleEvent {
+  private final com.cobblemon.mod.common.api.battles.model.PokemonBattle battle;
+  private final com.cobblemon.mod.common.battles.pokemon.BattlePokemon killed;
+  private final com.cobblemon.mod.common.api.battles.interpreter.BattleContext context;
+  private final java.lang.String pnx;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> structContext;
+  public com.cobblemon.mod.common.api.events.battles.BattleFaintedEvent(com.cobblemon.mod.common.api.battles.model.PokemonBattle, com.cobblemon.mod.common.battles.pokemon.BattlePokemon, com.cobblemon.mod.common.api.battles.interpreter.BattleContext, java.lang.String);
+  public com.cobblemon.mod.common.api.battles.model.PokemonBattle getBattle();
+  public final com.cobblemon.mod.common.battles.pokemon.BattlePokemon getKilled();
+  public final com.cobblemon.mod.common.api.battles.interpreter.BattleContext getContext();
+  public final java.lang.String getPnx();
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getStructContext();
+  public final com.cobblemon.mod.common.api.battles.model.PokemonBattle component1();
+  public final com.cobblemon.mod.common.battles.pokemon.BattlePokemon component2();
+  public final com.cobblemon.mod.common.api.battles.interpreter.BattleContext component3();
+  public final java.lang.String component4();
+  public final com.cobblemon.mod.common.api.events.battles.BattleFaintedEvent copy(com.cobblemon.mod.common.api.battles.model.PokemonBattle, com.cobblemon.mod.common.battles.pokemon.BattlePokemon, com.cobblemon.mod.common.api.battles.interpreter.BattleContext, java.lang.String);
+  public static com.cobblemon.mod.common.api.events.battles.BattleFaintedEvent copy$default(com.cobblemon.mod.common.api.events.battles.BattleFaintedEvent, com.cobblemon.mod.common.api.battles.model.PokemonBattle, com.cobblemon.mod.common.battles.pokemon.BattlePokemon, com.cobblemon.mod.common.api.battles.interpreter.BattleContext, java.lang.String, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+  private static final com.bedrockk.molang.runtime.value.MoValue structContext$lambda$1(com.cobblemon.mod.common.api.battles.model.actor.BattleActor);
+  private static final com.bedrockk.molang.runtime.value.MoValue structContext$lambda$3(com.cobblemon.mod.common.api.battles.model.actor.BattleActor);
+  private static final com.bedrockk.molang.runtime.value.MoValue structContext$lambda$5(com.cobblemon.mod.common.api.battles.model.actor.BattleActor);
+}
+Compiled from "BattleVictoryEvent.java"
+public final class com.cobblemon.mod.common.api.events.battles.BattleVictoryEvent implements com.cobblemon.mod.common.api.events.battles.BattleEvent {
+  private final com.cobblemon.mod.common.api.battles.model.PokemonBattle battle;
+  private final java.util.List<com.cobblemon.mod.common.api.battles.model.actor.BattleActor> winners;
+  private final java.util.List<com.cobblemon.mod.common.api.battles.model.actor.BattleActor> losers;
+  private final boolean wasWildCapture;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> context;
+  public com.cobblemon.mod.common.api.events.battles.BattleVictoryEvent(com.cobblemon.mod.common.api.battles.model.PokemonBattle, java.util.List<? extends com.cobblemon.mod.common.api.battles.model.actor.BattleActor>, java.util.List<? extends com.cobblemon.mod.common.api.battles.model.actor.BattleActor>, boolean);
+  public com.cobblemon.mod.common.api.battles.model.PokemonBattle getBattle();
+  public final java.util.List<com.cobblemon.mod.common.api.battles.model.actor.BattleActor> getWinners();
+  public final java.util.List<com.cobblemon.mod.common.api.battles.model.actor.BattleActor> getLosers();
+  public final boolean getWasWildCapture();
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public final com.cobblemon.mod.common.api.battles.model.PokemonBattle component1();
+  public final java.util.List<com.cobblemon.mod.common.api.battles.model.actor.BattleActor> component2();
+  public final java.util.List<com.cobblemon.mod.common.api.battles.model.actor.BattleActor> component3();
+  public final boolean component4();
+  public final com.cobblemon.mod.common.api.events.battles.BattleVictoryEvent copy(com.cobblemon.mod.common.api.battles.model.PokemonBattle, java.util.List<? extends com.cobblemon.mod.common.api.battles.model.actor.BattleActor>, java.util.List<? extends com.cobblemon.mod.common.api.battles.model.actor.BattleActor>, boolean);
+  public static com.cobblemon.mod.common.api.events.battles.BattleVictoryEvent copy$default(com.cobblemon.mod.common.api.events.battles.BattleVictoryEvent, com.cobblemon.mod.common.api.battles.model.PokemonBattle, java.util.List, java.util.List, boolean, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+  private static final com.bedrockk.molang.runtime.value.MoValue context$lambda$0(com.cobblemon.mod.common.api.battles.model.actor.BattleActor);
+  private static final com.bedrockk.molang.runtime.value.MoValue context$lambda$1(com.cobblemon.mod.common.api.battles.model.actor.BattleActor);
+  private static final com.bedrockk.molang.runtime.value.MoValue context$lambda$3(com.cobblemon.mod.common.api.battles.model.actor.BattleActor);
+  private static final com.bedrockk.molang.runtime.value.MoValue context$lambda$5(com.cobblemon.mod.common.api.battles.model.actor.BattleActor);
+  private static final com.bedrockk.molang.runtime.value.MoValue context$lambda$7(com.cobblemon.mod.common.api.battles.model.actor.BattleActor);
+  private static final com.bedrockk.molang.runtime.value.MoValue context$lambda$9(com.cobblemon.mod.common.api.battles.model.actor.BattleActor);
+  private static final com.bedrockk.molang.runtime.value.MoValue context$lambda$11(com.cobblemon.mod.common.api.battles.model.actor.BattleActor);
+  private static final com.bedrockk.molang.runtime.value.MoValue context$lambda$13(com.cobblemon.mod.common.api.battles.model.actor.BattleActor);
+  private static final com.bedrockk.molang.runtime.value.MoValue context$lambda$15(com.cobblemon.mod.common.entity.MoLangScriptingEntity);
+  private static final com.bedrockk.molang.runtime.value.MoValue context$lambda$17(com.cobblemon.mod.common.entity.MoLangScriptingEntity);
+  private static final com.bedrockk.molang.runtime.value.MoValue context$lambda$19(com.cobblemon.mod.common.api.battles.model.actor.BattleActor);
+  private static final com.bedrockk.molang.runtime.value.MoValue context$lambda$21(com.cobblemon.mod.common.api.battles.model.actor.BattleActor);
+  private static final com.bedrockk.molang.runtime.value.MoValue context$lambda$23(com.cobblemon.mod.common.api.battles.model.actor.BattleActor);
+}
+Compiled from "BerryHarvestEvent.java"
+public final class com.cobblemon.mod.common.api.events.berry.BerryHarvestEvent implements com.cobblemon.mod.common.api.events.berry.BerryEvent {
+  private final com.cobblemon.mod.common.api.berry.Berry berry;
+  private final net.minecraft.class_3222 player;
+  private final net.minecraft.class_1937 world;
+  private final net.minecraft.class_2338 pos;
+  private final net.minecraft.class_2680 state;
+  private final com.cobblemon.mod.common.block.entity.BerryBlockEntity blockEntity;
+  private final java.util.List<net.minecraft.class_1799> drops;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> context;
+  public com.cobblemon.mod.common.api.events.berry.BerryHarvestEvent(com.cobblemon.mod.common.api.berry.Berry, net.minecraft.class_3222, net.minecraft.class_1937, net.minecraft.class_2338, net.minecraft.class_2680, com.cobblemon.mod.common.block.entity.BerryBlockEntity, java.util.List<net.minecraft.class_1799>);
+  public com.cobblemon.mod.common.api.berry.Berry getBerry();
+  public final net.minecraft.class_3222 getPlayer();
+  public final net.minecraft.class_1937 getWorld();
+  public final net.minecraft.class_2338 getPos();
+  public final net.minecraft.class_2680 getState();
+  public final com.cobblemon.mod.common.block.entity.BerryBlockEntity getBlockEntity();
+  public final java.util.List<net.minecraft.class_1799> getDrops();
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public final com.cobblemon.mod.common.api.berry.Berry component1();
+  public final net.minecraft.class_3222 component2();
+  public final net.minecraft.class_1937 component3();
+  public final net.minecraft.class_2338 component4();
+  public final net.minecraft.class_2680 component5();
+  public final com.cobblemon.mod.common.block.entity.BerryBlockEntity component6();
+  public final java.util.List<net.minecraft.class_1799> component7();
+  public final com.cobblemon.mod.common.api.events.berry.BerryHarvestEvent copy(com.cobblemon.mod.common.api.berry.Berry, net.minecraft.class_3222, net.minecraft.class_1937, net.minecraft.class_2338, net.minecraft.class_2680, com.cobblemon.mod.common.block.entity.BerryBlockEntity, java.util.List<net.minecraft.class_1799>);
+  public static com.cobblemon.mod.common.api.events.berry.BerryHarvestEvent copy$default(com.cobblemon.mod.common.api.events.berry.BerryHarvestEvent, com.cobblemon.mod.common.api.berry.Berry, net.minecraft.class_3222, net.minecraft.class_1937, net.minecraft.class_2338, net.minecraft.class_2680, com.cobblemon.mod.common.block.entity.BerryBlockEntity, java.util.List, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "ApricornHarvestEvent.java"
+public final class com.cobblemon.mod.common.api.events.farming.ApricornHarvestEvent {
+  private final net.minecraft.class_3222 player;
+  private final com.cobblemon.mod.common.api.apricorn.Apricorn apricorn;
+  private final net.minecraft.class_3218 world;
+  private final net.minecraft.class_2338 pos;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> context;
+  public com.cobblemon.mod.common.api.events.farming.ApricornHarvestEvent(net.minecraft.class_3222, com.cobblemon.mod.common.api.apricorn.Apricorn, net.minecraft.class_3218, net.minecraft.class_2338);
+  public final net.minecraft.class_3222 getPlayer();
+  public final com.cobblemon.mod.common.api.apricorn.Apricorn getApricorn();
+  public final net.minecraft.class_3218 getWorld();
+  public final net.minecraft.class_2338 getPos();
+  public final net.minecraft.class_2680 getBlock();
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+}
+Compiled from "BobberSpawnPokemonEvent.java"
+public interface com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent {
+}
+Compiled from "BobberSpawnPokemonEvent.java"
+public final class com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent$Modify implements com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent {
+  private final com.cobblemon.mod.common.api.spawning.detail.SpawnAction<?> spawnAction;
+  private final net.minecraft.class_1799 rod;
+  private final com.cobblemon.mod.common.entity.pokemon.PokemonEntity pokemon;
+  public com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent$Modify(com.cobblemon.mod.common.api.spawning.detail.SpawnAction<?>, net.minecraft.class_1799, com.cobblemon.mod.common.entity.pokemon.PokemonEntity);
+  public final com.cobblemon.mod.common.api.spawning.detail.SpawnAction<?> getSpawnAction();
+  public final net.minecraft.class_1799 getRod();
+  public final com.cobblemon.mod.common.entity.pokemon.PokemonEntity getPokemon();
+  public final com.cobblemon.mod.common.api.spawning.detail.SpawnAction<?> component1();
+  public final net.minecraft.class_1799 component2();
+  public final com.cobblemon.mod.common.entity.pokemon.PokemonEntity component3();
+  public final com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent$Modify copy(com.cobblemon.mod.common.api.spawning.detail.SpawnAction<?>, net.minecraft.class_1799, com.cobblemon.mod.common.entity.pokemon.PokemonEntity);
+  public static com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent$Modify copy$default(com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent$Modify, com.cobblemon.mod.common.api.spawning.detail.SpawnAction, net.minecraft.class_1799, com.cobblemon.mod.common.entity.pokemon.PokemonEntity, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "BobberSpawnPokemonEvent.java"
+public final class com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent$Post implements com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent {
+  private final com.cobblemon.mod.common.entity.fishing.PokeRodFishingBobberEntity bobber;
+  private final com.cobblemon.mod.common.api.spawning.detail.SpawnAction<?> spawnAction;
+  private final net.minecraft.class_1799 bait;
+  private final com.cobblemon.mod.common.entity.pokemon.PokemonEntity pokemon;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> context;
+  public com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent$Post(com.cobblemon.mod.common.entity.fishing.PokeRodFishingBobberEntity, com.cobblemon.mod.common.api.spawning.detail.SpawnAction<?>, net.minecraft.class_1799, com.cobblemon.mod.common.entity.pokemon.PokemonEntity);
+  public final com.cobblemon.mod.common.entity.fishing.PokeRodFishingBobberEntity getBobber();
+  public final com.cobblemon.mod.common.api.spawning.detail.SpawnAction<?> getSpawnAction();
+  public final net.minecraft.class_1799 getBait();
+  public final com.cobblemon.mod.common.entity.pokemon.PokemonEntity getPokemon();
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public final com.cobblemon.mod.common.entity.fishing.PokeRodFishingBobberEntity component1();
+  public final com.cobblemon.mod.common.api.spawning.detail.SpawnAction<?> component2();
+  public final net.minecraft.class_1799 component3();
+  public final com.cobblemon.mod.common.entity.pokemon.PokemonEntity component4();
+  public final com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent$Post copy(com.cobblemon.mod.common.entity.fishing.PokeRodFishingBobberEntity, com.cobblemon.mod.common.api.spawning.detail.SpawnAction<?>, net.minecraft.class_1799, com.cobblemon.mod.common.entity.pokemon.PokemonEntity);
+  public static com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent$Post copy$default(com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent$Post, com.cobblemon.mod.common.entity.fishing.PokeRodFishingBobberEntity, com.cobblemon.mod.common.api.spawning.detail.SpawnAction, net.minecraft.class_1799, com.cobblemon.mod.common.entity.pokemon.PokemonEntity, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "BobberSpawnPokemonEvent.java"
+public final class com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent$Pre extends com.cobblemon.mod.common.api.events.Cancelable implements com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent {
+  private final com.cobblemon.mod.common.entity.fishing.PokeRodFishingBobberEntity bobber;
+  private final com.cobblemon.mod.common.api.spawning.detail.SpawnAction<?> spawnAction;
+  private final net.minecraft.class_1799 rod;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> context;
+  private final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> functions;
+  public com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent$Pre(com.cobblemon.mod.common.entity.fishing.PokeRodFishingBobberEntity, com.cobblemon.mod.common.api.spawning.detail.SpawnAction<?>, net.minecraft.class_1799);
+  public final com.cobblemon.mod.common.entity.fishing.PokeRodFishingBobberEntity getBobber();
+  public final com.cobblemon.mod.common.api.spawning.detail.SpawnAction<?> getSpawnAction();
+  public final net.minecraft.class_1799 getRod();
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> getFunctions();
+  public final com.cobblemon.mod.common.entity.fishing.PokeRodFishingBobberEntity component1();
+  public final com.cobblemon.mod.common.api.spawning.detail.SpawnAction<?> component2();
+  public final net.minecraft.class_1799 component3();
+  public final com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent$Pre copy(com.cobblemon.mod.common.entity.fishing.PokeRodFishingBobberEntity, com.cobblemon.mod.common.api.spawning.detail.SpawnAction<?>, net.minecraft.class_1799);
+  public static com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent$Pre copy$default(com.cobblemon.mod.common.api.events.fishing.BobberSpawnPokemonEvent$Pre, com.cobblemon.mod.common.entity.fishing.PokeRodFishingBobberEntity, com.cobblemon.mod.common.api.spawning.detail.SpawnAction, net.minecraft.class_1799, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "PokemonScannedEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokedex.scanning.PokemonScannedEvent {
+  private final net.minecraft.class_3222 player;
+  private final com.cobblemon.mod.common.pokedex.scanner.PokedexEntityData scannedPokemonEntityData;
+  private final com.cobblemon.mod.common.pokedex.scanner.ScannableEntity scannedEntity;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> context;
+  public com.cobblemon.mod.common.api.events.pokedex.scanning.PokemonScannedEvent(net.minecraft.class_3222, com.cobblemon.mod.common.pokedex.scanner.PokedexEntityData, com.cobblemon.mod.common.pokedex.scanner.ScannableEntity);
+  public final net.minecraft.class_3222 getPlayer();
+  public final com.cobblemon.mod.common.pokedex.scanner.PokedexEntityData getScannedPokemonEntityData();
+  public final com.cobblemon.mod.common.pokedex.scanner.ScannableEntity getScannedEntity();
+  public final boolean isOwned();
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public final net.minecraft.class_3222 component1();
+  public final com.cobblemon.mod.common.pokedex.scanner.PokedexEntityData component2();
+  public final com.cobblemon.mod.common.pokedex.scanner.ScannableEntity component3();
+  public final com.cobblemon.mod.common.api.events.pokedex.scanning.PokemonScannedEvent copy(net.minecraft.class_3222, com.cobblemon.mod.common.pokedex.scanner.PokedexEntityData, com.cobblemon.mod.common.pokedex.scanner.ScannableEntity);
+  public static com.cobblemon.mod.common.api.events.pokedex.scanning.PokemonScannedEvent copy$default(com.cobblemon.mod.common.api.events.pokedex.scanning.PokemonScannedEvent, net.minecraft.class_3222, com.cobblemon.mod.common.pokedex.scanner.PokedexEntityData, com.cobblemon.mod.common.pokedex.scanner.ScannableEntity, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "CollectEggEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.CollectEggEvent extends com.cobblemon.mod.common.api.events.Cancelable {
+  private final com.cobblemon.mod.common.api.pokemon.PokemonProperties egg;
+  private final com.cobblemon.mod.common.pokemon.Pokemon maleParent;
+  private final com.cobblemon.mod.common.pokemon.Pokemon femaleParent;
+  private final net.minecraft.class_3222 player;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> context;
+  private final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> functions;
+  public com.cobblemon.mod.common.api.events.pokemon.CollectEggEvent(com.cobblemon.mod.common.api.pokemon.PokemonProperties, com.cobblemon.mod.common.pokemon.Pokemon, com.cobblemon.mod.common.pokemon.Pokemon, net.minecraft.class_3222);
+  public final com.cobblemon.mod.common.api.pokemon.PokemonProperties getEgg();
+  public final com.cobblemon.mod.common.pokemon.Pokemon getMaleParent();
+  public final com.cobblemon.mod.common.pokemon.Pokemon getFemaleParent();
+  public final net.minecraft.class_3222 getPlayer();
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> getFunctions();
+}
+Compiled from "FossilRevivedEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.FossilRevivedEvent {
+  private final com.cobblemon.mod.common.pokemon.Pokemon pokemon;
+  private final net.minecraft.class_3222 player;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> context;
+  public com.cobblemon.mod.common.api.events.pokemon.FossilRevivedEvent(com.cobblemon.mod.common.pokemon.Pokemon, net.minecraft.class_3222);
+  public final com.cobblemon.mod.common.pokemon.Pokemon getPokemon();
+  public final net.minecraft.class_3222 getPlayer();
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public final com.cobblemon.mod.common.pokemon.Pokemon component1();
+  public final net.minecraft.class_3222 component2();
+  public final com.cobblemon.mod.common.api.events.pokemon.FossilRevivedEvent copy(com.cobblemon.mod.common.pokemon.Pokemon, net.minecraft.class_3222);
+  public static com.cobblemon.mod.common.api.events.pokemon.FossilRevivedEvent copy$default(com.cobblemon.mod.common.api.events.pokemon.FossilRevivedEvent, com.cobblemon.mod.common.pokemon.Pokemon, net.minecraft.class_3222, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "HatchEggEvent.java"
+public interface com.cobblemon.mod.common.api.events.pokemon.HatchEggEvent {
+  public abstract net.minecraft.class_3222 getPlayer();
+}
+Compiled from "HatchEggEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.HatchEggEvent$Post implements com.cobblemon.mod.common.api.events.pokemon.HatchEggEvent {
+  private net.minecraft.class_3222 player;
+  private final com.cobblemon.mod.common.pokemon.Pokemon pokemon;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> context;
+  public com.cobblemon.mod.common.api.events.pokemon.HatchEggEvent$Post(net.minecraft.class_3222, com.cobblemon.mod.common.pokemon.Pokemon);
+  public net.minecraft.class_3222 getPlayer();
+  public void setPlayer(net.minecraft.class_3222);
+  public final com.cobblemon.mod.common.pokemon.Pokemon getPokemon();
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public final net.minecraft.class_3222 component1();
+  public final com.cobblemon.mod.common.pokemon.Pokemon component2();
+  public final com.cobblemon.mod.common.api.events.pokemon.HatchEggEvent$Post copy(net.minecraft.class_3222, com.cobblemon.mod.common.pokemon.Pokemon);
+  public static com.cobblemon.mod.common.api.events.pokemon.HatchEggEvent$Post copy$default(com.cobblemon.mod.common.api.events.pokemon.HatchEggEvent$Post, net.minecraft.class_3222, com.cobblemon.mod.common.pokemon.Pokemon, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "HatchEggEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.HatchEggEvent$Pre extends com.cobblemon.mod.common.api.events.Cancelable implements com.cobblemon.mod.common.api.events.pokemon.HatchEggEvent {
+  private com.cobblemon.mod.common.api.pokemon.PokemonProperties egg;
+  private final net.minecraft.class_3222 player;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> context;
+  private final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> functions;
+  public com.cobblemon.mod.common.api.events.pokemon.HatchEggEvent$Pre(com.cobblemon.mod.common.api.pokemon.PokemonProperties, net.minecraft.class_3222);
+  public final com.cobblemon.mod.common.api.pokemon.PokemonProperties getEgg();
+  public final void setEgg(com.cobblemon.mod.common.api.pokemon.PokemonProperties);
+  public net.minecraft.class_3222 getPlayer();
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> getFunctions();
+  public final com.cobblemon.mod.common.api.pokemon.PokemonProperties component1();
+  public final net.minecraft.class_3222 component2();
+  public final com.cobblemon.mod.common.api.events.pokemon.HatchEggEvent$Pre copy(com.cobblemon.mod.common.api.pokemon.PokemonProperties, net.minecraft.class_3222);
+  public static com.cobblemon.mod.common.api.events.pokemon.HatchEggEvent$Pre copy$default(com.cobblemon.mod.common.api.events.pokemon.HatchEggEvent$Pre, com.cobblemon.mod.common.api.pokemon.PokemonProperties, net.minecraft.class_3222, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "LevelUpEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.LevelUpEvent {
+  private final com.cobblemon.mod.common.pokemon.Pokemon pokemon;
+  private final int oldLevel;
+  private int newLevel;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> context;
+  private final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> functions;
+  public com.cobblemon.mod.common.api.events.pokemon.LevelUpEvent(com.cobblemon.mod.common.pokemon.Pokemon, int, int);
+  public final com.cobblemon.mod.common.pokemon.Pokemon getPokemon();
+  public final int getOldLevel();
+  public final int getNewLevel();
+  public final void setNewLevel(int);
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> getFunctions();
+  private static final com.bedrockk.molang.runtime.value.DoubleValue functions$lambda$0(com.cobblemon.mod.common.api.events.pokemon.LevelUpEvent, com.bedrockk.molang.runtime.MoParams);
+}
+Compiled from "PokedexDataChangedEvent.java"
+public interface com.cobblemon.mod.common.api.events.pokemon.PokedexDataChangedEvent {
+  public abstract com.cobblemon.mod.common.pokedex.scanner.PokedexEntityData getDataSource();
+  public abstract com.cobblemon.mod.common.api.pokedex.PokedexEntryProgress getKnowledge();
+  public abstract java.util.UUID getPlayerUUID();
+  public abstract com.cobblemon.mod.common.api.pokedex.FormDexRecord getRecord();
+  public default com.cobblemon.mod.common.api.pokedex.AbstractPokedexManager getPokedexManager();
+  public default java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public static com.cobblemon.mod.common.api.pokedex.AbstractPokedexManager access$getPokedexManager$jd(com.cobblemon.mod.common.api.events.pokemon.PokedexDataChangedEvent);
+  public static java.util.Map access$getContext$jd(com.cobblemon.mod.common.api.events.pokemon.PokedexDataChangedEvent);
+}
+Compiled from "PokedexDataChangedEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.PokedexDataChangedEvent$DefaultImpls {
+  public static com.cobblemon.mod.common.api.pokedex.AbstractPokedexManager getPokedexManager(com.cobblemon.mod.common.api.events.pokemon.PokedexDataChangedEvent);
+  public static java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext(com.cobblemon.mod.common.api.events.pokemon.PokedexDataChangedEvent);
+}
+Compiled from "PokedexDataChangedEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.PokedexDataChangedEvent$Post implements com.cobblemon.mod.common.api.events.pokemon.PokedexDataChangedEvent {
+  private final com.cobblemon.mod.common.pokedex.scanner.PokedexEntityData dataSource;
+  private final com.cobblemon.mod.common.api.pokedex.PokedexEntryProgress knowledge;
+  private final java.util.UUID playerUUID;
+  private final com.cobblemon.mod.common.api.pokedex.FormDexRecord record;
+  public com.cobblemon.mod.common.api.events.pokemon.PokedexDataChangedEvent$Post(com.cobblemon.mod.common.pokedex.scanner.PokedexEntityData, com.cobblemon.mod.common.api.pokedex.PokedexEntryProgress, java.util.UUID, com.cobblemon.mod.common.api.pokedex.FormDexRecord);
+  public com.cobblemon.mod.common.pokedex.scanner.PokedexEntityData getDataSource();
+  public com.cobblemon.mod.common.api.pokedex.PokedexEntryProgress getKnowledge();
+  public java.util.UUID getPlayerUUID();
+  public com.cobblemon.mod.common.api.pokedex.FormDexRecord getRecord();
+  public com.cobblemon.mod.common.api.pokedex.AbstractPokedexManager getPokedexManager();
+  public java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+}
+Compiled from "PokedexDataChangedEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.PokedexDataChangedEvent$Pre extends com.cobblemon.mod.common.api.events.Cancelable implements com.cobblemon.mod.common.api.events.pokemon.PokedexDataChangedEvent {
+  private final com.cobblemon.mod.common.pokedex.scanner.PokedexEntityData dataSource;
+  private final com.cobblemon.mod.common.api.pokedex.PokedexEntryProgress knowledge;
+  private final java.util.UUID playerUUID;
+  private final com.cobblemon.mod.common.api.pokedex.FormDexRecord record;
+  private final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> functions;
+  public com.cobblemon.mod.common.api.events.pokemon.PokedexDataChangedEvent$Pre(com.cobblemon.mod.common.pokedex.scanner.PokedexEntityData, com.cobblemon.mod.common.api.pokedex.PokedexEntryProgress, java.util.UUID, com.cobblemon.mod.common.api.pokedex.FormDexRecord);
+  public com.cobblemon.mod.common.pokedex.scanner.PokedexEntityData getDataSource();
+  public com.cobblemon.mod.common.api.pokedex.PokedexEntryProgress getKnowledge();
+  public java.util.UUID getPlayerUUID();
+  public com.cobblemon.mod.common.api.pokedex.FormDexRecord getRecord();
+  public final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> getFunctions();
+  public com.cobblemon.mod.common.api.pokedex.AbstractPokedexManager getPokedexManager();
+  public java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+}
+Compiled from "PokemonCapturedEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.PokemonCapturedEvent {
+  private final com.cobblemon.mod.common.pokemon.Pokemon pokemon;
+  private final net.minecraft.class_3222 player;
+  private final com.cobblemon.mod.common.entity.pokeball.EmptyPokeBallEntity pokeBallEntity;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> context;
+  public com.cobblemon.mod.common.api.events.pokemon.PokemonCapturedEvent(com.cobblemon.mod.common.pokemon.Pokemon, net.minecraft.class_3222, com.cobblemon.mod.common.entity.pokeball.EmptyPokeBallEntity);
+  public final com.cobblemon.mod.common.pokemon.Pokemon getPokemon();
+  public final net.minecraft.class_3222 getPlayer();
+  public final com.cobblemon.mod.common.entity.pokeball.EmptyPokeBallEntity getPokeBallEntity();
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public final com.cobblemon.mod.common.pokemon.Pokemon component1();
+  public final net.minecraft.class_3222 component2();
+  public final com.cobblemon.mod.common.entity.pokeball.EmptyPokeBallEntity component3();
+  public final com.cobblemon.mod.common.api.events.pokemon.PokemonCapturedEvent copy(com.cobblemon.mod.common.pokemon.Pokemon, net.minecraft.class_3222, com.cobblemon.mod.common.entity.pokeball.EmptyPokeBallEntity);
+  public static com.cobblemon.mod.common.api.events.pokemon.PokemonCapturedEvent copy$default(com.cobblemon.mod.common.api.events.pokemon.PokemonCapturedEvent, com.cobblemon.mod.common.pokemon.Pokemon, net.minecraft.class_3222, com.cobblemon.mod.common.entity.pokeball.EmptyPokeBallEntity, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "PokemonSentEvent.java"
+public interface com.cobblemon.mod.common.api.events.pokemon.PokemonSentEvent {
+  public abstract com.cobblemon.mod.common.pokemon.Pokemon getPokemon();
+  public abstract net.minecraft.class_3218 getLevel();
+  public abstract net.minecraft.class_243 getPosition();
+}
+Compiled from "PokemonSentEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.PokemonSentEvent$Post implements com.cobblemon.mod.common.api.events.pokemon.PokemonSentEvent {
+  private final com.cobblemon.mod.common.pokemon.Pokemon pokemon;
+  private final net.minecraft.class_3218 level;
+  private final net.minecraft.class_243 position;
+  private final com.cobblemon.mod.common.entity.pokemon.PokemonEntity pokemonEntity;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.struct.QueryStruct> context;
+  public com.cobblemon.mod.common.api.events.pokemon.PokemonSentEvent$Post(com.cobblemon.mod.common.pokemon.Pokemon, net.minecraft.class_3218, net.minecraft.class_243, com.cobblemon.mod.common.entity.pokemon.PokemonEntity);
+  public com.cobblemon.mod.common.pokemon.Pokemon getPokemon();
+  public net.minecraft.class_3218 getLevel();
+  public net.minecraft.class_243 getPosition();
+  public final com.cobblemon.mod.common.entity.pokemon.PokemonEntity getPokemonEntity();
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.struct.QueryStruct> getContext();
+  public final com.cobblemon.mod.common.pokemon.Pokemon component1();
+  public final net.minecraft.class_3218 component2();
+  public final net.minecraft.class_243 component3();
+  public final com.cobblemon.mod.common.entity.pokemon.PokemonEntity component4();
+  public final com.cobblemon.mod.common.api.events.pokemon.PokemonSentEvent$Post copy(com.cobblemon.mod.common.pokemon.Pokemon, net.minecraft.class_3218, net.minecraft.class_243, com.cobblemon.mod.common.entity.pokemon.PokemonEntity);
+  public static com.cobblemon.mod.common.api.events.pokemon.PokemonSentEvent$Post copy$default(com.cobblemon.mod.common.api.events.pokemon.PokemonSentEvent$Post, com.cobblemon.mod.common.pokemon.Pokemon, net.minecraft.class_3218, net.minecraft.class_243, com.cobblemon.mod.common.entity.pokemon.PokemonEntity, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "PokemonSentEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.PokemonSentEvent$Pre extends com.cobblemon.mod.common.api.events.Cancelable implements com.cobblemon.mod.common.api.events.pokemon.PokemonSentEvent {
+  private final com.cobblemon.mod.common.pokemon.Pokemon pokemon;
+  private final net.minecraft.class_3218 level;
+  private final net.minecraft.class_243 position;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> context;
+  private final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> functions;
+  public com.cobblemon.mod.common.api.events.pokemon.PokemonSentEvent$Pre(com.cobblemon.mod.common.pokemon.Pokemon, net.minecraft.class_3218, net.minecraft.class_243);
+  public com.cobblemon.mod.common.pokemon.Pokemon getPokemon();
+  public net.minecraft.class_3218 getLevel();
+  public net.minecraft.class_243 getPosition();
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> getFunctions();
+  public final com.cobblemon.mod.common.pokemon.Pokemon component1();
+  public final net.minecraft.class_3218 component2();
+  public final net.minecraft.class_243 component3();
+  public final com.cobblemon.mod.common.api.events.pokemon.PokemonSentEvent$Pre copy(com.cobblemon.mod.common.pokemon.Pokemon, net.minecraft.class_3218, net.minecraft.class_243);
+  public static com.cobblemon.mod.common.api.events.pokemon.PokemonSentEvent$Pre copy$default(com.cobblemon.mod.common.api.events.pokemon.PokemonSentEvent$Pre, com.cobblemon.mod.common.pokemon.Pokemon, net.minecraft.class_3218, net.minecraft.class_243, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "TradeEvent.java"
+public interface com.cobblemon.mod.common.api.events.pokemon.TradeEvent {
+  public abstract com.cobblemon.mod.common.trade.TradeParticipant getTradeParticipant1();
+  public abstract com.cobblemon.mod.common.pokemon.Pokemon getTradeParticipant1Pokemon();
+  public abstract com.cobblemon.mod.common.trade.TradeParticipant getTradeParticipant2();
+  public abstract com.cobblemon.mod.common.pokemon.Pokemon getTradeParticipant2Pokemon();
+}
+Compiled from "TradeEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.TradeEvent$Post implements com.cobblemon.mod.common.api.events.pokemon.TradeEvent {
+  private final com.cobblemon.mod.common.trade.TradeParticipant tradeParticipant1;
+  private final com.cobblemon.mod.common.pokemon.Pokemon tradeParticipant1Pokemon;
+  private final com.cobblemon.mod.common.trade.TradeParticipant tradeParticipant2;
+  private final com.cobblemon.mod.common.pokemon.Pokemon tradeParticipant2Pokemon;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> context;
+  public com.cobblemon.mod.common.api.events.pokemon.TradeEvent$Post(com.cobblemon.mod.common.trade.TradeParticipant, com.cobblemon.mod.common.pokemon.Pokemon, com.cobblemon.mod.common.trade.TradeParticipant, com.cobblemon.mod.common.pokemon.Pokemon);
+  public com.cobblemon.mod.common.trade.TradeParticipant getTradeParticipant1();
+  public com.cobblemon.mod.common.pokemon.Pokemon getTradeParticipant1Pokemon();
+  public com.cobblemon.mod.common.trade.TradeParticipant getTradeParticipant2();
+  public com.cobblemon.mod.common.pokemon.Pokemon getTradeParticipant2Pokemon();
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public final com.cobblemon.mod.common.trade.TradeParticipant component1();
+  public final com.cobblemon.mod.common.pokemon.Pokemon component2();
+  public final com.cobblemon.mod.common.trade.TradeParticipant component3();
+  public final com.cobblemon.mod.common.pokemon.Pokemon component4();
+  public final com.cobblemon.mod.common.api.events.pokemon.TradeEvent$Post copy(com.cobblemon.mod.common.trade.TradeParticipant, com.cobblemon.mod.common.pokemon.Pokemon, com.cobblemon.mod.common.trade.TradeParticipant, com.cobblemon.mod.common.pokemon.Pokemon);
+  public static com.cobblemon.mod.common.api.events.pokemon.TradeEvent$Post copy$default(com.cobblemon.mod.common.api.events.pokemon.TradeEvent$Post, com.cobblemon.mod.common.trade.TradeParticipant, com.cobblemon.mod.common.pokemon.Pokemon, com.cobblemon.mod.common.trade.TradeParticipant, com.cobblemon.mod.common.pokemon.Pokemon, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "TradeEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.TradeEvent$Pre extends com.cobblemon.mod.common.api.events.Cancelable implements com.cobblemon.mod.common.api.events.pokemon.TradeEvent {
+  private final com.cobblemon.mod.common.trade.TradeParticipant tradeParticipant1;
+  private final com.cobblemon.mod.common.pokemon.Pokemon tradeParticipant1Pokemon;
+  private final com.cobblemon.mod.common.trade.TradeParticipant tradeParticipant2;
+  private final com.cobblemon.mod.common.pokemon.Pokemon tradeParticipant2Pokemon;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> context;
+  private final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> functions;
+  public com.cobblemon.mod.common.api.events.pokemon.TradeEvent$Pre(com.cobblemon.mod.common.trade.TradeParticipant, com.cobblemon.mod.common.pokemon.Pokemon, com.cobblemon.mod.common.trade.TradeParticipant, com.cobblemon.mod.common.pokemon.Pokemon);
+  public com.cobblemon.mod.common.trade.TradeParticipant getTradeParticipant1();
+  public com.cobblemon.mod.common.pokemon.Pokemon getTradeParticipant1Pokemon();
+  public com.cobblemon.mod.common.trade.TradeParticipant getTradeParticipant2();
+  public com.cobblemon.mod.common.pokemon.Pokemon getTradeParticipant2Pokemon();
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> getFunctions();
+  public final com.cobblemon.mod.common.trade.TradeParticipant component1();
+  public final com.cobblemon.mod.common.pokemon.Pokemon component2();
+  public final com.cobblemon.mod.common.trade.TradeParticipant component3();
+  public final com.cobblemon.mod.common.pokemon.Pokemon component4();
+  public final com.cobblemon.mod.common.api.events.pokemon.TradeEvent$Pre copy(com.cobblemon.mod.common.trade.TradeParticipant, com.cobblemon.mod.common.pokemon.Pokemon, com.cobblemon.mod.common.trade.TradeParticipant, com.cobblemon.mod.common.pokemon.Pokemon);
+  public static com.cobblemon.mod.common.api.events.pokemon.TradeEvent$Pre copy$default(com.cobblemon.mod.common.api.events.pokemon.TradeEvent$Pre, com.cobblemon.mod.common.trade.TradeParticipant, com.cobblemon.mod.common.pokemon.Pokemon, com.cobblemon.mod.common.trade.TradeParticipant, com.cobblemon.mod.common.pokemon.Pokemon, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "EvolutionCompleteEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.evolution.EvolutionCompleteEvent implements com.cobblemon.mod.common.api.events.pokemon.evolution.EvolutionEvent {
+  private final com.cobblemon.mod.common.pokemon.Pokemon pokemon;
+  private final com.cobblemon.mod.common.pokemon.Pokemon sourcePokemon;
+  private final com.cobblemon.mod.common.api.pokemon.evolution.Evolution evolution;
+  private final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> context;
+  public com.cobblemon.mod.common.api.events.pokemon.evolution.EvolutionCompleteEvent(com.cobblemon.mod.common.pokemon.Pokemon, com.cobblemon.mod.common.pokemon.Pokemon, com.cobblemon.mod.common.api.pokemon.evolution.Evolution);
+  public com.cobblemon.mod.common.pokemon.Pokemon getPokemon();
+  public final com.cobblemon.mod.common.pokemon.Pokemon getSourcePokemon();
+  public com.cobblemon.mod.common.api.pokemon.evolution.Evolution getEvolution();
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public final com.cobblemon.mod.common.pokemon.Pokemon component1();
+  public final com.cobblemon.mod.common.pokemon.Pokemon component2();
+  public final com.cobblemon.mod.common.api.pokemon.evolution.Evolution component3();
+  public final com.cobblemon.mod.common.api.events.pokemon.evolution.EvolutionCompleteEvent copy(com.cobblemon.mod.common.pokemon.Pokemon, com.cobblemon.mod.common.pokemon.Pokemon, com.cobblemon.mod.common.api.pokemon.evolution.Evolution);
+  public static com.cobblemon.mod.common.api.events.pokemon.evolution.EvolutionCompleteEvent copy$default(com.cobblemon.mod.common.api.events.pokemon.evolution.EvolutionCompleteEvent, com.cobblemon.mod.common.pokemon.Pokemon, com.cobblemon.mod.common.pokemon.Pokemon, com.cobblemon.mod.common.api.pokemon.evolution.Evolution, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "ExperienceCandyUseEvent.java"
+public interface com.cobblemon.mod.common.api.events.pokemon.interaction.ExperienceCandyUseEvent {
+  public abstract net.minecraft.class_3222 getPlayer();
+  public abstract com.cobblemon.mod.common.pokemon.Pokemon getPokemon();
+  public abstract com.cobblemon.mod.common.item.interactive.CandyItem getItem();
+}
+Compiled from "ExperienceCandyUseEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.interaction.ExperienceCandyUseEvent$Post implements com.cobblemon.mod.common.api.events.pokemon.interaction.ExperienceCandyUseEvent {
+  private final net.minecraft.class_3222 player;
+  private final com.cobblemon.mod.common.pokemon.Pokemon pokemon;
+  private final com.cobblemon.mod.common.item.interactive.CandyItem item;
+  private final com.cobblemon.mod.common.pokemon.AddExperienceResult experienceResult;
+  public com.cobblemon.mod.common.api.events.pokemon.interaction.ExperienceCandyUseEvent$Post(net.minecraft.class_3222, com.cobblemon.mod.common.pokemon.Pokemon, com.cobblemon.mod.common.item.interactive.CandyItem, com.cobblemon.mod.common.pokemon.AddExperienceResult);
+  public net.minecraft.class_3222 getPlayer();
+  public com.cobblemon.mod.common.pokemon.Pokemon getPokemon();
+  public com.cobblemon.mod.common.item.interactive.CandyItem getItem();
+  public final com.cobblemon.mod.common.pokemon.AddExperienceResult getExperienceResult();
+  public final boolean wasExperienceGiven();
+  public final boolean wasCandyConsumed();
+}
+Compiled from "ExperienceCandyUseEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.interaction.ExperienceCandyUseEvent$Pre extends com.cobblemon.mod.common.api.events.Cancelable implements com.cobblemon.mod.common.api.events.pokemon.interaction.ExperienceCandyUseEvent {
+  private final net.minecraft.class_3222 player;
+  private final com.cobblemon.mod.common.pokemon.Pokemon pokemon;
+  private final com.cobblemon.mod.common.item.interactive.CandyItem item;
+  private final int baseExperienceYield;
+  private int experienceYield;
+  public com.cobblemon.mod.common.api.events.pokemon.interaction.ExperienceCandyUseEvent$Pre(net.minecraft.class_3222, com.cobblemon.mod.common.pokemon.Pokemon, com.cobblemon.mod.common.item.interactive.CandyItem, int, int);
+  public net.minecraft.class_3222 getPlayer();
+  public com.cobblemon.mod.common.pokemon.Pokemon getPokemon();
+  public com.cobblemon.mod.common.item.interactive.CandyItem getItem();
+  public final int getBaseExperienceYield();
+  public final int getExperienceYield();
+  public final void setExperienceYield(int);
+}
+Compiled from "HeldItemUpdatedEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.interaction.HeldItemUpdatedEvent extends com.cobblemon.mod.common.api.events.Cancelable {
+  private final net.minecraft.class_1309 cause;
+  private final com.cobblemon.mod.common.pokemon.Pokemon pokemon;
+  private final net.minecraft.class_1799 originalStack;
+  private final boolean decrement;
+  private final net.minecraft.class_1799 oldItem;
+  private final net.minecraft.class_1799 newItem;
+  public com.cobblemon.mod.common.api.events.pokemon.interaction.HeldItemUpdatedEvent(net.minecraft.class_1309, com.cobblemon.mod.common.pokemon.Pokemon, net.minecraft.class_1799, boolean, net.minecraft.class_1799, net.minecraft.class_1799);
+  public final net.minecraft.class_1309 getCause();
+  public final com.cobblemon.mod.common.pokemon.Pokemon getPokemon();
+  public final net.minecraft.class_1799 getOriginalStack();
+  public final boolean getDecrement();
+  public final net.minecraft.class_1799 getOldItem();
+  public final net.minecraft.class_1799 getNewItem();
+  public final net.minecraft.class_1309 component1();
+  public final com.cobblemon.mod.common.pokemon.Pokemon component2();
+  public final net.minecraft.class_1799 component3();
+  public final boolean component4();
+  public final net.minecraft.class_1799 component5();
+  public final net.minecraft.class_1799 component6();
+  public final com.cobblemon.mod.common.api.events.pokemon.interaction.HeldItemUpdatedEvent copy(net.minecraft.class_1309, com.cobblemon.mod.common.pokemon.Pokemon, net.minecraft.class_1799, boolean, net.minecraft.class_1799, net.minecraft.class_1799);
+  public static com.cobblemon.mod.common.api.events.pokemon.interaction.HeldItemUpdatedEvent copy$default(com.cobblemon.mod.common.api.events.pokemon.interaction.HeldItemUpdatedEvent, net.minecraft.class_1309, com.cobblemon.mod.common.pokemon.Pokemon, net.minecraft.class_1799, boolean, net.minecraft.class_1799, net.minecraft.class_1799, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "PokemonInteractionGUICreationEvent.java"
+public final class com.cobblemon.mod.common.api.events.pokemon.interaction.PokemonInteractionGUICreationEvent {
+  private final java.util.UUID pokemonID;
+  private final boolean mountShoulder;
+  private final boolean giveHeld;
+  private final boolean giveCosmetic;
+  private final boolean canRide;
+  private final com.google.common.collect.Multimap<com.cobblemon.mod.common.client.gui.interact.wheel.Orientation, com.cobblemon.mod.common.client.gui.interact.wheel.InteractWheelOption> options;
+  public com.cobblemon.mod.common.api.events.pokemon.interaction.PokemonInteractionGUICreationEvent(java.util.UUID, boolean, boolean, boolean, boolean, com.google.common.collect.Multimap<com.cobblemon.mod.common.client.gui.interact.wheel.Orientation, com.cobblemon.mod.common.client.gui.interact.wheel.InteractWheelOption>);
+  public final java.util.UUID getPokemonID();
+  public final boolean getMountShoulder();
+  public final boolean getGiveHeld();
+  public final boolean getGiveCosmetic();
+  public final boolean getCanRide();
+  public final com.google.common.collect.Multimap<com.cobblemon.mod.common.client.gui.interact.wheel.Orientation, com.cobblemon.mod.common.client.gui.interact.wheel.InteractWheelOption> getOptions();
+  public final void addFillingOption(com.cobblemon.mod.common.client.gui.interact.wheel.InteractWheelOption);
+  public final void addOption(com.cobblemon.mod.common.client.gui.interact.wheel.Orientation, com.cobblemon.mod.common.client.gui.interact.wheel.InteractWheelOption);
+  private final com.cobblemon.mod.common.client.gui.interact.wheel.Orientation getNextFreeOrientation();
+  public final java.util.UUID component1();
+  public final boolean component2();
+  public final boolean component3();
+  public final boolean component4();
+  public final boolean component5();
+  public final com.google.common.collect.Multimap<com.cobblemon.mod.common.client.gui.interact.wheel.Orientation, com.cobblemon.mod.common.client.gui.interact.wheel.InteractWheelOption> component6();
+  public final com.cobblemon.mod.common.api.events.pokemon.interaction.PokemonInteractionGUICreationEvent copy(java.util.UUID, boolean, boolean, boolean, boolean, com.google.common.collect.Multimap<com.cobblemon.mod.common.client.gui.interact.wheel.Orientation, com.cobblemon.mod.common.client.gui.interact.wheel.InteractWheelOption>);
+  public static com.cobblemon.mod.common.api.events.pokemon.interaction.PokemonInteractionGUICreationEvent copy$default(com.cobblemon.mod.common.api.events.pokemon.interaction.PokemonInteractionGUICreationEvent, java.util.UUID, boolean, boolean, boolean, boolean, com.google.common.collect.Multimap, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "StarterChosenEvent.java"
+public final class com.cobblemon.mod.common.api.events.starter.StarterChosenEvent extends com.cobblemon.mod.common.api.events.Cancelable {
+  private final net.minecraft.class_3222 player;
+  private final com.cobblemon.mod.common.api.pokemon.PokemonProperties properties;
+  private com.cobblemon.mod.common.pokemon.Pokemon pokemon;
+  private final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> functions;
+  public com.cobblemon.mod.common.api.events.starter.StarterChosenEvent(net.minecraft.class_3222, com.cobblemon.mod.common.api.pokemon.PokemonProperties, com.cobblemon.mod.common.pokemon.Pokemon);
+  public final net.minecraft.class_3222 getPlayer();
+  public final com.cobblemon.mod.common.api.pokemon.PokemonProperties getProperties();
+  public final com.cobblemon.mod.common.pokemon.Pokemon getPokemon();
+  public final void setPokemon(com.cobblemon.mod.common.pokemon.Pokemon);
+  public final java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> getFunctions();
+  public final net.minecraft.class_3222 component1();
+  public final com.cobblemon.mod.common.api.pokemon.PokemonProperties component2();
+  public final com.cobblemon.mod.common.pokemon.Pokemon component3();
+  public final com.cobblemon.mod.common.api.events.starter.StarterChosenEvent copy(net.minecraft.class_3222, com.cobblemon.mod.common.api.pokemon.PokemonProperties, com.cobblemon.mod.common.pokemon.Pokemon);
+  public static com.cobblemon.mod.common.api.events.starter.StarterChosenEvent copy$default(com.cobblemon.mod.common.api.events.starter.StarterChosenEvent, net.minecraft.class_3222, com.cobblemon.mod.common.api.pokemon.PokemonProperties, com.cobblemon.mod.common.pokemon.Pokemon, int, java.lang.Object);
+  public java.lang.String toString();
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "ReleasePokemonEvent.java"
+public interface com.cobblemon.mod.common.api.events.storage.ReleasePokemonEvent {
+  public abstract net.minecraft.class_3222 getPlayer();
+  public abstract com.cobblemon.mod.common.pokemon.Pokemon getPokemon();
+  public abstract com.cobblemon.mod.common.api.storage.PokemonStore<?> getStorage();
+  public default java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+  public static java.util.Map access$getContext$jd(com.cobblemon.mod.common.api.events.storage.ReleasePokemonEvent);
+}
+Compiled from "ReleasePokemonEvent.java"
+public final class com.cobblemon.mod.common.api.events.storage.ReleasePokemonEvent$DefaultImpls {
+  public static java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext(com.cobblemon.mod.common.api.events.storage.ReleasePokemonEvent);
+}
+Compiled from "ReleasePokemonEvent.java"
+public final class com.cobblemon.mod.common.api.events.storage.ReleasePokemonEvent$Post implements com.cobblemon.mod.common.api.events.storage.ReleasePokemonEvent {
+  private final net.minecraft.class_3222 player;
+  private final com.cobblemon.mod.common.pokemon.Pokemon pokemon;
+  private final com.cobblemon.mod.common.api.storage.PokemonStore<?> storage;
+  public com.cobblemon.mod.common.api.events.storage.ReleasePokemonEvent$Post(net.minecraft.class_3222, com.cobblemon.mod.common.pokemon.Pokemon, com.cobblemon.mod.common.api.storage.PokemonStore<?>);
+  public net.minecraft.class_3222 getPlayer();
+  public com.cobblemon.mod.common.pokemon.Pokemon getPokemon();
+  public com.cobblemon.mod.common.api.storage.PokemonStore<?> getStorage();
+  public java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+}
+Compiled from "ReleasePokemonEvent.java"
+public final class com.cobblemon.mod.common.api.events.storage.ReleasePokemonEvent$Pre extends com.cobblemon.mod.common.api.events.Cancelable implements com.cobblemon.mod.common.api.events.storage.ReleasePokemonEvent {
+  private final net.minecraft.class_3222 player;
+  private final com.cobblemon.mod.common.pokemon.Pokemon pokemon;
+  private final com.cobblemon.mod.common.api.storage.PokemonStore<?> storage;
+  private final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> functions;
+  public com.cobblemon.mod.common.api.events.storage.ReleasePokemonEvent$Pre(net.minecraft.class_3222, com.cobblemon.mod.common.pokemon.Pokemon, com.cobblemon.mod.common.api.storage.PokemonStore<?>);
+  public net.minecraft.class_3222 getPlayer();
+  public com.cobblemon.mod.common.pokemon.Pokemon getPokemon();
+  public com.cobblemon.mod.common.api.storage.PokemonStore<?> getStorage();
+  public final java.util.Map<java.lang.String, kotlin.jvm.functions.Function1<com.bedrockk.molang.runtime.MoParams, com.bedrockk.molang.runtime.value.MoValue>> getFunctions();
+  public java.util.Map<java.lang.String, com.bedrockk.molang.runtime.value.MoValue> getContext();
+}

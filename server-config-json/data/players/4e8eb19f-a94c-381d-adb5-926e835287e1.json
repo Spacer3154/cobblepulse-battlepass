@@ -1,0 +1,31 @@
+{
+  "uuid": "4e8eb19f-a94c-381d-adb5-926e835287e1",
+  "name": "BPStar",
+  "saison": 1,
+  "points": 100,
+  "premium": true,
+  "premiumSource": "test",
+  "premiumDepuis": 1794742656737,
+  "reclames": [],
+  "progression": {
+    "s|s1|connexion_20": 1
+  },
+  "terminees": [],
+  "dernierJour": "2026-11-15",
+  "serie": 1,
+  "joursConnexion": 1,
+  "meilleureSerie": 1,
+  "dernierPalierAnnonce": 0,
+  "chasses": {},
+  "apercus": {},
+  "recharges": {},
+  "globalesFaites": [],
+  "captures": {},
+  "pokemonRemis": [],
+  "chassesTerminees": 0,
+  "pointsQuetes": 0,
+  "pointsConnexion": 100,
+  "pointsChasses": 0,
+  "pointsStaff": 0,
+  "quetesTerminees": 0
+}

@@ -1,0 +1,56 @@
+{
+  "vague": 1794742653333,
+  "chasses": [
+    {
+      "entry": {
+        "espece": "growlithe",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "ivParfaits": 0,
+        "poids": 1.0
+      },
+      "genre": "",
+      "nature": "",
+      "ivs": [],
+      "debut": 1794742653333,
+      "fin": 1794746253333
+    },
+    {
+      "entry": {
+        "espece": "eevee",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "ivParfaits": 0,
+        "poids": 1.0
+      },
+      "genre": "",
+      "nature": "",
+      "ivs": [],
+      "debut": 1794742653333,
+      "fin": 1794746253333
+    },
+    {
+      "entry": {
+        "espece": "magikarp",
+        "forme": "",
+        "aspects": [],
+        "genre": "",
+        "nature": "",
+        "ivParfaits": 0,
+        "poids": 1.0
+      },
+      "genre": "",
+      "nature": "",
+      "ivs": [],
+      "debut": 1794742653333,
+      "fin": 1794746253333
+    }
+  ],
+  "fin": 1794746253333,
+  "rechargeFin": 0,
+  "faites": []
+}

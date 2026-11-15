@@ -1,0 +1,35 @@
+{
+  "uuid": "29088988-6d25-34ba-a344-6813980727d7",
+  "name": "BPRewards",
+  "saison": 1,
+  "points": 1100,
+  "premium": true,
+  "premiumSource": "test",
+  "premiumDepuis": 1794742656570,
+  "reclames": [
+    "g:1",
+    "p:1"
+  ],
+  "progression": {
+    "s|s1|connexion_20": 1,
+    "s|s1|pokedex_100": 1
+  },
+  "terminees": [],
+  "dernierJour": "2026-11-15",
+  "serie": 1,
+  "joursConnexion": 1,
+  "meilleureSerie": 1,
+  "dernierPalierAnnonce": 1,
+  "chasses": {},
+  "apercus": {},
+  "recharges": {},
+  "globalesFaites": [],
+  "captures": {},
+  "pokemonRemis": [],
+  "chassesTerminees": 0,
+  "pointsQuetes": 0,
+  "pointsConnexion": 100,
+  "pointsChasses": 0,
+  "pointsStaff": 0,
+  "quetesTerminees": 0
+}
