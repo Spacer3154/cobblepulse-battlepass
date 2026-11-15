@@ -415,7 +415,7 @@ public final class AdminScreen extends Screen {
                 () -> playerAction("admin_premium", o -> o.addProperty("on", false))));
         for (Button b : pr) b.active = perm("premium");
         f.section("Réinitialisation");
-        List<Button> rs = f.buttons("", List.of("Réinitialiser (garde le premium)", "Tout réinitialiser"), List.of(
+        List<Button> rs = f.buttons("", List.of("Réinit. (garde ★)", "Tout réinitialiser"), List.of(
                 () -> playerAction("admin_reset", o -> o.addProperty("keepPremium", true)),
                 () -> {
                     if (confirmed("reset_full_" + playerName)) playerAction("admin_reset", o -> o.addProperty("keepPremium", false));
@@ -853,7 +853,11 @@ public final class AdminScreen extends Screen {
         int x = px + Math.min(pw - 12, 430) + 20;
         int y = cy + 6;
         if (playerInfo == null) {
-            Ui.text(g, "Choisissez un joueur puis « Voir la fiche ».", x, y, Ui.MUTED);
+            int lw = Math.max(60, px + pw - 10 - x);
+            for (var line : Ui.font().split(net.minecraft.network.chat.Component.literal("Choisissez un joueur puis « Voir la fiche »."), lw)) {
+                g.drawString(Ui.font(), line, x, y, Ui.MUTED, false);
+                y += 10;
+            }
             return;
         }
         JsonObject p = playerInfo;

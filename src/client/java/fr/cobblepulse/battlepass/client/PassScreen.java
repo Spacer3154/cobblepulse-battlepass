@@ -343,7 +343,7 @@ public final class PassScreen extends Screen {
         } else {
             int per = Math.max(1, Math.min(n, (w - 10) / 18));
             int rows = (n + per - 1) / per;
-            float scale = rows > 1 ? 1.0f : n == 1 ? Math.min(2.5f, Math.max(1f, (w - 16) / 24f)) : n == 2 ? 1.5f : 1.0f;
+            float scale = rows > 1 ? 1.0f : n == 1 ? Math.min(2.0f, Math.max(1f, (w - 16) / 28f)) : n == 2 ? 1.5f : 1.0f;
             if (h < 50) scale = Math.min(scale, 1.25f);
             int size = (int) (16 * scale);
             int gy = y + 14 + Math.max(0, (h - 26 - rows * (size + 2)) / 2);
