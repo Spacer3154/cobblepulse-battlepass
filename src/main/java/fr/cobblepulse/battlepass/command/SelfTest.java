@@ -111,6 +111,21 @@ public final class SelfTest {
         return n;
     }
 
+    private static int score(net.minecraft.world.scores.Scoreboard sb, String holder) {
+        var obj = sb.getObjective("bp_selftest");
+        var info = obj == null ? null : sb.getPlayerScoreInfo(net.minecraft.world.scores.ScoreHolder.forNameOnly(holder), obj);
+        return info == null ? 0 : info.value();
+    }
+
+    private static boolean owns(ServerPlayer p, UUID mon) {
+        if (Cobblemon.INSTANCE.getStorage().getParty(p).get(mon) != null) return true;
+        try {
+            return Cobblemon.INSTANCE.getStorage().getPC(p).get(mon) != null;
+        } catch (Throwable t) {
+            return false;
+        }
+    }
+
     private static int partySize(ServerPlayer p) {
         int n = 0;
         for (Pokemon pk : Cobblemon.INSTANCE.getStorage().getParty(p)) if (pk != null) n++;
@@ -277,19 +292,20 @@ public final class SelfTest {
         RewardService.giveAll(p, d, List.of(Defaults.item("minecraft:cobblestone", 200)), new ArrayList<>());
         check(src, "reward.big_stack", count(p, Items.COBBLESTONE) == 200, "n=" + count(p, Items.COBBLESTONE));
         // Commande console (tableau des scores : fonctionne aussi pour un joueur factice)
+        // (les commandes lancees pendant une autre commande sont executees juste apres elle : verification differee)
         MinecraftServer server = p.getServer();
-        server.getCommands().performPrefixedCommand(server.createCommandSourceStack(), "scoreboard objectives add bp_selftest dummy");
-        RewardService.giveAll(p, d, List.of(Defaults.cmd("test", "minecraft:paper", "scoreboard players add %player% bp_selftest 5")), new ArrayList<>());
-        int score = 0;
-        try {
-            var sb = server.getScoreboard();
-            var obj = sb.getObjective("bp_selftest");
-            var info = obj == null ? null : sb.getPlayerScoreInfo(net.minecraft.world.scores.ScoreHolder.forNameOnly(p.getGameProfile().getName()), obj);
-            score = info == null ? 0 : info.value();
-        } catch (Throwable t) {
-            BattlePass.LOG.warn("[BattlePass][selftest] score : {}", t.toString());
+        var sb = server.getScoreboard();
+        if (sb.getObjective("bp_selftest") == null) {
+            sb.addObjective("bp_selftest", net.minecraft.world.scores.criteria.ObjectiveCriteria.DUMMY, Component.literal("bp_selftest"),
+                    net.minecraft.world.scores.criteria.ObjectiveCriteria.RenderType.INTEGER, false, null);
         }
-        check(src, "reward.command", score == 5, "score=" + score);
+        String holder = p.getScoreboardName();
+        int before = score(sb, holder);
+        RewardService.giveAll(p, d, List.of(Defaults.cmd("test", "minecraft:paper", "scoreboard players add %player% bp_selftest 5")), new ArrayList<>());
+        Scheduler.later(2, () -> {
+            int after = score(sb, holder);
+            check(src, "reward.command", after - before == 5, "score " + before + " -> " + after);
+        });
         // Coins Jobs+ : absent en CI -> refus propre
         List<String> e2 = new ArrayList<>();
         boolean coins = RewardService.giveAll(p, d, List.of(Defaults.amount("coins_jobs", 10)), e2);
@@ -466,10 +482,10 @@ public final class SelfTest {
             Cobblemon.INSTANCE.getStorage().getParty(p).add(good);
             Hunts.onCapture(p, good);
             long pts = d.points;
-            int party = partySize(p);
+            boolean had = owns(p, good.getUuid());
             boolean ok = Hunts.turnIn(p, "facile", 0, good.getUuid());
-            check(src, "hunt.turn_in", ok && d.points - pts == test.solo("facile").points && partySize(p) == party - 1
-                    && Hunts.state(p, d, "facile") == Hunts.State.COOLDOWN, "points+" + (d.points - pts) + " party " + party + "->" + partySize(p));
+            check(src, "hunt.turn_in", ok && d.points - pts == test.solo("facile").points && had && !owns(p, good.getUuid())
+                    && Hunts.state(p, d, "facile") == Hunts.State.COOLDOWN, "points+" + (d.points - pts) + " repris=" + (had && !owns(p, good.getUuid())));
             check(src, "hunt.reuse_refused", !Hunts.turnIn(p, "facile", 0, good.getUuid()), "");
             // Exigences (genre, nature, IV) : normale = Evoli male rigide avec 1 IV >= minimum
             Hunts.start(p, "normal", false);
@@ -526,7 +542,10 @@ public final class SelfTest {
     }
 
     private static void luckPermsCheck(CommandSourceStack src) {
-        if (lpUser == null) return;
+        if (lpUser == null) {
+            summary(src);
+            return;
+        }
         String g1 = LuckPermsBridge.describe(lpUser);
         PlayerData d = PlayerStore.get(lpUser);
         Season.setPremium(d, true, "test");
@@ -565,8 +584,8 @@ public final class SelfTest {
         FakePlayer p = fake(level, "BPPersist");
         PlayerData d = PlayerStore.get(p);
         Season.reset(d, false);
-        Season.addPoints(d, p, 4321, "test", false);
         Season.setPremium(d, true, "test");
+        d.points = 4321;
         d.reclames.add("g:1");
         PlayerStore.save(d);
         // Reinitialisation d'un joueur
@@ -574,8 +593,11 @@ public final class SelfTest {
         PlayerData rd = PlayerStore.get(r);
         Season.addPoints(rd, r, 3000, "test", false);
         Season.setPremium(rd, true, "test");
+        rd.reclames.add("g:1");
         Season.reset(rd, true);
-        check(src, "reset.player_keep_premium", rd.points == 0 && rd.premium && rd.reclames.isEmpty(), "points=" + rd.points);
+        // Joueur en ligne : la connexion du jour est recreditee juste apres la reinitialisation
+        long login = Cfg.pass.connexion.actif ? Cfg.pass.connexion.points * 2L : 0;
+        check(src, "reset.player_keep_premium", rd.points <= login && rd.premium && rd.reclames.isEmpty(), "points=" + rd.points);
         // Changement de duree
         long end = Season.end();
         Season.setDays(Cfg.pass.jours + 2);

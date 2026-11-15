@@ -13,7 +13,10 @@ import net.luckperms.api.util.Tristate;
 import net.minecraft.server.level.ServerPlayer;
 
 import java.util.Locale;
+import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
@@ -60,18 +63,37 @@ final class LuckPermsHook {
         return g.equalsIgnoreCase(free) || g.equalsIgnoreCase(premium);
     }
 
+    /** Modifications serialisees par joueur : deux changements rapproches ne doivent pas s'entremeler. */
+    private static final Map<UUID, CompletableFuture<Void>> CHAINS = new ConcurrentHashMap<>();
+
     static void setPassGroup(UUID uuid, String group, long expiryMs, String free, String premium) {
         LuckPerms lp = LuckPermsProvider.get();
-        lp.getUserManager().modifyUser(uuid, user -> {
-            user.data().clear(n -> isPassGroup(n, free, premium));
-            if (group != null && !group.isBlank() && expiryMs > System.currentTimeMillis()) {
-                long seconds = Math.max(1, (expiryMs - System.currentTimeMillis()) / 1000L);
-                user.data().add(InheritanceNode.builder(group.trim().toLowerCase(Locale.ROOT)).expiry(seconds, TimeUnit.SECONDS).build());
-            }
+        CompletableFuture<Void> next = CHAINS.compute(uuid, (k, prev) -> {
+            CompletableFuture<Void> base = prev == null ? CompletableFuture.completedFuture(null) : prev.exceptionally(t -> null);
+            return base.thenCompose(v -> lp.getUserManager().modifyUser(uuid, user -> {
+                user.data().clear(n -> isPassGroup(n, free, premium));
+                if (group != null && !group.isBlank() && expiryMs > System.currentTimeMillis()) {
+                    long seconds = Math.max(1, (expiryMs - System.currentTimeMillis()) / 1000L);
+                    user.data().add(InheritanceNode.builder(group.trim().toLowerCase(Locale.ROOT)).expiry(seconds, TimeUnit.SECONDS).build());
+                }
+            }));
         });
+        next.whenComplete((v, t) -> CHAINS.remove(uuid, next));
+    }
+
+    /** Attend la fin des modifications en cours (tests). */
+    static void await(UUID uuid) {
+        CompletableFuture<Void> f = CHAINS.get(uuid);
+        if (f != null) {
+            try {
+                f.get(10, TimeUnit.SECONDS);
+            } catch (Exception ignored) {
+            }
+        }
     }
 
     static String describe(UUID uuid) {
+        await(uuid);
         LuckPerms lp = LuckPermsProvider.get();
         User u = lp.getUserManager().loadUser(uuid).join();
         String groups = u.getInheritedGroups(QueryOptions.nonContextual()).stream().map(x -> x.getName()).collect(Collectors.joining(","));
