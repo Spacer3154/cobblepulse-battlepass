@@ -1,0 +1,137 @@
+# =====================================================================
+#  CobblePulse Passe de Combat - Messages
+#  Codes couleur : &a, &l, &#RRGGBB et <#RRGGBB>texte</#>. Variables : %nom%.
+#  %prefix% est remplace par general.prefix.
+# =====================================================================
+
+[general]
+prefix = "<#FFD24A>★ Passe</#> &8» &7"
+no_permission = "%prefix%&cVous n'avez pas la permission."
+players_only = "%prefix%&cCommande réservée aux joueurs."
+player_not_found = "%prefix%&cJoueur introuvable : &f%player%"
+no_client = "%prefix%&cL'éditeur graphique nécessite le mod CobblePulse Passe de Combat côté client (modpack)."
+
+[status]
+ouvert = "Ouverte"
+maintenance = "Fermée (maintenance)"
+attente = "Pas encore commencée"
+terminee = "Terminée"
+
+[source]
+quete = "quête"
+connexion = "connexion"
+chasse = "chasse"
+staff = "staff"
+recompense = "récompense"
+test = "test"
+
+[season]
+ended = "%prefix%&e%season% &7est terminée ! Pensez à réclamer vos récompenses avec &e/passe&7."
+new = "%prefix%&a%season% &7commence pour &e%days% jours&7 ! Ouvrez le passe avec &e/passe&7."
+opened = "%prefix%&aLe Passe de Combat est de nouveau ouvert."
+closed = "%prefix%&cLe Passe de Combat est fermé pour maintenance. Votre progression est conservée."
+boost = "%prefix%&dBonus de points x%mult% &7pendant &e%duration%&7 !"
+boost_end = "%prefix%&7Le bonus de points est terminé."
+not_running = "%prefix%&cPasse de Combat indisponible : %status%."
+
+[points]
+gained = "<#8FE3FF>+%points% points de passe</#> &8(%source%) &7- total &f%total%"
+
+[tier]
+title = "<#FFD24A>Palier %tier% !</#>"
+subtitle = "&7Ouvrez &e/passe &7pour réclamer vos récompenses"
+reached = "%prefix%&aVous atteignez le palier &e%tier%&a/&e%max%&a ! &7Réclamez vos récompenses avec &e/passe&7."
+broadcast = "%prefix%&e%player% &7atteint le palier &6%tier% &7du &e%season%&7 !"
+
+[premium]
+unlocked = "%prefix%<#FFD24A>★ Passe premium débloqué pour %season% !</#> &7Les récompenses premium sont disponibles."
+disabled = "%prefix%&cLe passe premium est désactivé sur ce serveur."
+already = "%prefix%&7Vous avez déjà le passe premium."
+store_only = "%prefix%&7Le passe premium s'obtient sur la boutique du serveur."
+not_enough = "%prefix%&cIl vous faut &e%price% &cpour débloquer le passe premium."
+
+[claim]
+locked = "%prefix%&cLe palier %tier% n'est pas encore débloqué."
+need_premium = "%prefix%&cRécompense réservée au passe premium."
+already = "%prefix%&7Palier %tier% déjà réclamé."
+error = "%prefix%&cImpossible de donner les récompenses du palier %tier%. Contactez un membre du staff."
+done = "%prefix%&aRécompenses du palier %tier% obtenues !"
+done_premium = "%prefix%<#FFD24A>Récompenses premium du palier %tier% obtenues !</#>"
+all = "%prefix%&a%count% récompense(s) obtenue(s) !"
+nothing = "%prefix%&7Aucune récompense à réclamer pour le moment."
+
+[join]
+claimable = "%prefix%&eVous avez %count% récompense(s) à réclamer &7(&e/passe&7)."
+
+[login]
+daily = "%prefix%&aConnexion du jour : &e+%points% points &7(série de %streak% jour(s))."
+streak_bonus = "%prefix%<#FFD24A>Bonus de série ! &e+%points% points</#> &7(%streak% jours d'affilée)."
+
+[reset]
+notified = "%prefix%&eVotre progression du Passe de Combat a été réinitialisée par le staff."
+
+[quest]
+progress = "&b%quest% &7: &f%progress%&7/&f%target%"
+completed = "%prefix%&aQuête %category% terminée : &f%quest% &a(+%points% points)"
+deliver_none = "%prefix%&cVous n'avez pas les objets demandés dans votre inventaire."
+delivered = "%prefix%&a%count% objet(s) livré(s)."
+
+[hunt]
+global_started = "%prefix%&d%count% chasse(s) globale(s) &7commencent pour &e%duration%&7 ! (&e/chasses&7)"
+global_completed = "%prefix%&e%player% &7a terminé la chasse globale : &d%pokemon%&7."
+expired = "%prefix%&cTemps écoulé pour la chasse %difficulty%."
+cannot_start = "%prefix%&cChasse %difficulty% impossible : %state%."
+empty_pool = "%prefix%&cAucun Pokémon configuré pour la chasse %difficulty%."
+started = "%prefix%&aChasse %difficulty% lancée : &e%pokemon% &7(%duration%)."
+abandoned = "%prefix%&7Chasse %difficulty% abandonnée."
+not_active = "%prefix%&cCette chasse n'est pas en cours."
+already_done = "%prefix%&7Vous avez déjà terminé cette chasse."
+pokemon_missing = "%prefix%&cCe Pokémon n'est plus dans votre équipe ni votre PC."
+not_matching = "%prefix%&cCe Pokémon ne convient pas : &f%reasons%"
+last_pokemon = "%prefix%&cImpossible de remettre le dernier Pokémon de votre équipe."
+completed = "%prefix%&aChasse %difficulty% terminée (&e%pokemon%&a) : &e+%points% points&a. Butin : &f%loot%"
+capture_matches = "%prefix%&aCe %pokemon% correspond à %count% chasse(s) en cours ! Remettez-le depuis &e/passe &7(onglet Chasses)."
+no_candidate = "%prefix%&cAucun Pokémon de votre équipe ou de votre PC ne correspond à cette chasse."
+
+[hunt.state]
+disabled = "désactivée"
+locked = "verrouillée"
+active = "en cours"
+cooldown = "en recharge"
+ready = "disponible"
+
+[info]
+header = "&8&m-----&r <#FFD24A>★ %season%</#> &7(%status%, encore &e%left%&7) &8&m-----"
+tier = "&7Palier &e%tier%&7/&e%max% &8| &7Points &f%points% &8| &7Prochain palier &f%progress%&7/&f%next% &8| &7Premium : %premium%"
+premium_yes = "&6oui ★"
+premium_no = "&7non"
+claim_button = "&a&l[Réclamer %count% récompense(s)]"
+claim_hover = "&7Cliquez pour tout réclamer"
+streak = "&7Série de connexion : &e%streak% &7jour(s) &8| &7Jours de connexion : &e%days%"
+quests_header = "&6%category% &8(remise à zéro dans %reset%)"
+quest = " &7• &f%quest% &8- &e%progress%&7/&e%target% &8(+%points%) %premium%"
+quest_done = " &a✔ &7%quest% &8(+%points%)"
+quest_premium = "&6★"
+top_header = "&8&m-----&r <#FFD24A>Classement %season%</#> &8&m-----"
+top_line = "&e#%rank% &f%player% &7- palier &e%tier% &8(%points% pts)"
+hunts_header = "&8&m-----&r &dChasses &8&m-----"
+hunt_line = " &d%difficulty% &8[%state%] &f%pokemon% &7%extra%"
+hunt_global_line = " &5Globale %number% &f%pokemon% &7%state%"
+hunt_done = "&aterminée"
+
+[staff]
+points_done = "%prefix%&a%player% : &e%points% points &7(palier %tier%)."
+points_received = "%prefix%&aLe staff vous a donné &e%points% points de passe&a !"
+inspect = "%prefix%&e%player% &7: %points% points, palier %tier%, premium %premium%, %claimed% palier(s) réclamé(s), %quests% quête(s), %hunts% chasse(s), série %streak%, %days% jour(s) de connexion."
+quest_validated = "%prefix%&aQuête %quest% validée pour %player%."
+quest_unknown = "%prefix%&cQuête %quest% introuvable (ou déjà terminée) pour %player%."
+hunts_cooldown = "%prefix%&aRecharges des chasses de %player% remises à zéro."
+
+[admin]
+days_set = "%prefix%&aDurée de la saison : &e%days% jours &7(fin le %end%)."
+reset_done = "%prefix%&aProgression de %player% réinitialisée."
+reset_all_done = "%prefix%&a%count% joueur(s) réinitialisé(s)."
+premium_given = "%prefix%&aPasse premium donné à %player% pour %season%."
+premium_removed = "%prefix%&7Passe premium retiré à %player%."
+reloaded = "%prefix%&aConfiguration rechargée."
+hunts_restarted = "%prefix%&aNouvelle vague de chasses globales."
