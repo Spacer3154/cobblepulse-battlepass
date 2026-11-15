@@ -35,12 +35,26 @@ public final class LuckPermsBridge {
         }
     }
 
+    /**
+     * Noeud accorde explicitement (directement ou par un groupe), sans tenir compte des jokers (* ne donne pas le premium).
+     * @return null si LuckPerms est absent ou le joueur non charge.
+     */
+    public static Boolean exact(ServerPlayer p, String node) {
+        if (!PRESENT || p == null) return null;
+        try {
+            return LuckPermsHook.exact(p, node);
+        } catch (Throwable t) {
+            warn(t);
+            return null;
+        }
+    }
+
     /** Cree (si besoin) les groupes du passe : poids, nom affiche, permission premium. */
     public static void ensureGroups(String free, String premium, int weight) {
         if (!PRESENT) return;
         try {
             LuckPermsHook.ensureGroup(free, "Passe gratuit", weight, null);
-            LuckPermsHook.ensureGroup(premium, "Passe premium", weight + 1, "cobblepulse.battlepass.premium");
+            LuckPermsHook.ensureGroup(premium, "Passe premium", weight + 1, null);
         } catch (Throwable t) {
             warn(t);
         }

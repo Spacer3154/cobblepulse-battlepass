@@ -111,6 +111,8 @@ public final class PassScreen extends Screen {
     @Override
     protected void init() {
         fitGuiScale();
+        // Le serveur n'envoie les mises a jour en direct qu'aux ecrans ouverts
+        Ui.send("view", openArg(true));
         px = Math.max(6, (width - Math.min(width - 12, 760)) / 2);
         pw = Math.min(width - 12, 760);
         py = 6;

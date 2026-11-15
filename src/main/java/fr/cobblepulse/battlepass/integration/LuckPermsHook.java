@@ -29,12 +29,24 @@ final class LuckPermsHook {
         return t == Tristate.UNDEFINED ? null : t.asBoolean();
     }
 
+    static Boolean exact(ServerPlayer p, String node) {
+        LuckPerms lp = LuckPermsProvider.get();
+        User user = lp.getUserManager().getUser(p.getUUID());
+        if (user == null) return null;
+        for (Node n : user.resolveInheritedNodes(QueryOptions.nonContextual())) {
+            if (n.getKey().equalsIgnoreCase(node)) return n.getValue();
+        }
+        return false;
+    }
+
     static void ensureGroup(String name, String display, int weight, String permission) {
         if (name == null || name.isBlank()) return;
         LuckPerms lp = LuckPermsProvider.get();
         String g = name.trim().toLowerCase(Locale.ROOT);
         lp.getGroupManager().createAndLoadGroup(g).thenAccept(group -> {
-            group.data().clear(n -> NodeType.DISPLAY_NAME.matches(n) || NodeType.WEIGHT.matches(n));
+            // Le grade du passe ne doit jamais donner le premium lui-meme (sinon il survivrait a une nouvelle saison)
+            group.data().clear(n -> NodeType.DISPLAY_NAME.matches(n) || NodeType.WEIGHT.matches(n)
+                    || n.getKey().equalsIgnoreCase("cobblepulse.battlepass.premium"));
             group.data().add(DisplayNameNode.builder(display).build());
             group.data().add(WeightNode.builder(weight).build());
             if (permission != null) group.data().add(Node.builder(permission).build());

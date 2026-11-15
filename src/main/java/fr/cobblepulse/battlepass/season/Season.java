@@ -322,7 +322,7 @@ public final class Season {
     public static boolean isPremium(PlayerData d, ServerPlayer p) {
         if (!Cfg.pass.premium.actif || d == null) return false;
         if (d.premium) return true;
-        if (p != null && Boolean.TRUE.equals(LuckPermsBridge.check(p, Perms.PREMIUM))) {
+        if (p != null && Boolean.TRUE.equals(LuckPermsBridge.exact(p, Perms.PREMIUM))) {
             setPremium(d, true, "luckperms");
             Msg.send(p, "premium.unlocked", "season", Cfg.pass.nom);
             return true;
